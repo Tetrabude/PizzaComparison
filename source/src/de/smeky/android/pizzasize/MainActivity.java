@@ -16,7 +16,7 @@ public class MainActivity extends ListActivity {
     /** Called when the activity is first created. */
 	private List<Pizza> pizzaList;
 	private PizzaListAdapter pizzaAdapter;
-	
+	/* Test */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
