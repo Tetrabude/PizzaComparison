@@ -53,7 +53,7 @@ public class MainActivity extends ListActivity {
 		
 		Pizza pizza4 = new PizzaRound();
 		pizza1.setPizzaName("Pizza4");
-		list.add(pizza4);
+		list.add(pizza4); 
 		
 		return list;
 	}
