@@ -74,7 +74,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		list.add(pizza4);
 
 		PizzaRound pizza6 = new PizzaRound();
-		pizza6.setPizzaName("Groﬂ");
+		pizza6.setPizzaName("Gro√ü");
 		pizza6.setPrize(6.15);
 		pizza6.setDiameter(30);
 		list.add(pizza6);
