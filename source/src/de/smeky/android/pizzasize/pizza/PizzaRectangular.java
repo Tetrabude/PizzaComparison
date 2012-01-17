@@ -1,5 +1,10 @@
 package de.smeky.android.pizzasize.pizza;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+import de.smeky.android.pizzasize.Helper;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -21,8 +26,11 @@ public class PizzaRectangular extends Pizza {
 	
 	@Override
 	public String getDimension() {
-		return "" + length + "x" + width;
+		return "" + Helper.doubleToRealNumberString(length) + " × " + Helper.doubleToRealNumberString(width);
 	}
+	
+
+	
 	public double getLength() {
 		return length;
 	}
