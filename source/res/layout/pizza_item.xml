@@ -2,23 +2,27 @@
 <RelativeLayout
 	android:id="@+id/relativeLayout1"
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	android:layout_height="wrap_content"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<ImageView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:src="@drawable/pizza_rund"
 		android:id="@+id/imageView1"
-		android:layout_alignParentLeft="true"></ImageView>
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"></ImageView>
+
 	<RelativeLayout
-		android:layout_width="wrap_content"
-		android:id="@+id/relativeLayout2"
-		android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/imageView1"
-		android:layout_alignTop="@+id/imageView1"
-		android:layout_alignBottom="@+id/imageView1"
-		android:layout_alignParentRight="true"
-		android:layout_marginRight="10px" android:layout_marginBottom="5px" android:layout_marginTop="5px">
+	    android:id="@+id/relativeLayout2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="60px"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignTop="@+id/imageView1"
+	    android:layout_marginRight="10px"
+	    android:layout_marginTop="5px"
+	    android:layout_marginLeft="5px"
+	    android:layout_toRightOf="@+id/imageView1" >
+
 		<TextView
 			android:layout_alignParentLeft="true"
 			android:layout_height="wrap_content"
