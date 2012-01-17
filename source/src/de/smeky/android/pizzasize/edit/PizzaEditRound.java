@@ -2,16 +2,24 @@ package de.smeky.android.pizzasize.edit;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnKeyListener;
 import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
+import android.widget.Toast;
+import de.smeky.android.pizzasize.Helper;
 import de.smeky.android.pizzasize.R;
 import de.smeky.android.pizzasize.pizza.Pizza;
 import de.smeky.android.pizzasize.pizza.PizzaRound;
 
-public class PizzaEditRound extends PizzaEdit {
+public class PizzaEditRound extends PizzaEdit implements OnSeekBarChangeListener, OnKeyListener {
 	
 	private EditText txtDiameter;
- 
+	private SeekBar diameterSeekBar;
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	setContentView(R.layout.pizza_edit_round);
@@ -21,8 +29,12 @@ public class PizzaEditRound extends PizzaEdit {
 
         PizzaRound temp = (PizzaRound) pizza;
         
-        txtDiameter.setText(""+temp.getDiameter());
+        txtDiameter.setText(Helper.doubleToRealNumberString(temp.getDiameter()));
+        txtDiameter.setOnKeyListener(this);
         
+        diameterSeekBar = (SeekBar)findViewById(R.id.seekBarDiameter);
+        diameterSeekBar.setOnSeekBarChangeListener(this);
+                
     }
 
     @Override
@@ -38,7 +50,51 @@ public class PizzaEditRound extends PizzaEdit {
 
 	@Override
 	protected Pizza getNewPizzaStore() {
-		return new PizzaRound();
+		return new PizzaRound(); 
 	}
+
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch) {
+        
+    	String progressString = progress +"";
+    	
+    	if(fromTouch) {
+        	txtDiameter.setText(progressString);
+        }
+    }
+
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        
+    }
+
+    public void onStopTrackingTouch(SeekBar seekBar) {
+      
+    }
+
+
+	public boolean onKey(View v, int keyCode, KeyEvent event) {
+		
+		switch(v.getId()){
+		
+		case R.id.txtDiameter:
+			
+			if(!txtDiameter.getText().toString().equals(""))
+			{
+		
+			
+			int sekDiameter = diameterSeekBar.getProgress();
+			int diameter = Integer.valueOf(txtDiameter.getText().toString());
+						
+			
+			if(sekDiameter != diameter){
+				diameterSeekBar.setProgress(diameter);
+			}
+			}
+			break;
+			
+		}
+			
+		return false;
+	}
+
 	
 }

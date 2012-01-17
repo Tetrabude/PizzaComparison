@@ -1,29 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
+<RelativeLayout
+	android:id="@+id/relativeLayout1"
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-    <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name"></TextView>
-	<EditText
-		android:id="@+id/txtName"
-		android:layout_height="wrap_content"
-		android:text="Name"
-		android:layout_width="match_parent" android:inputType="text"></EditText>
-	<TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/diameter"></TextView>
-	<EditText
-		android:layout_height="wrap_content"
-		android:text="Diameter"
-		android:layout_width="match_parent"
-		android:id="@+id/txtDiameter" android:inputType="numberDecimal"></EditText>
-	<TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price"></TextView>
-	<EditText
-		android:layout_height="wrap_content"
-		android:text="Price"
-		android:layout_width="match_parent"
-		android:id="@+id/txtSellingPrice" android:inputType="numberDecimal"></EditText>
-	<Button
-		android:layout_height="wrap_content"
-		android:id="@+id/btnSave" android:text="@string/save" android:layout_width="match_parent"></Button>
+	android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/txtLabelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_toLeftOf="@+id/btnSave"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Name" 
+        android:layout_below="@+id/txtLabelName"
+        >
+    </EditText>
+    
+   <Button
+        android:id="@+id/btnSave"
+         android:layout_below="@+id/txtLabelName"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/save" >
+    </Button>
+    
+   <TextView
+        android:id="@+id/txtLabelDiameter"
+         android:layout_below="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diameter" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtDiameter"
+        android:layout_below="@+id/txtLabelDiameter"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="75" >
+    </EditText>
+    
+     <SeekBar
+        android:id="@+id/seekBarDiameter"
+         android:layout_below="@+id/txtLabelDiameter"
+        android:layout_toRightOf="@+id/txtDiameter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:scrollbarStyle="insideOverlay" />
+     
+       <TextView
+        android:id="@+id/txtLabelSellingPrice"
+         android:layout_below="@+id/txtDiameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtSellingPrice"
+         android:layout_below="@+id/txtLabelSellingPrice"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="100.55" >
+    </EditText>
+
+    
+ <!--    
+
+    <SeekBar
+        android:id="@+id/seekBarPrice"
+        android:layout_toRightOf="@+id/txtDiameter"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="insideOverlay" />
+    
+  
+
+
+
+    <SeekBar
+        android:id="@+id/seekBarDiameter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtDiameter"
+        android:scrollbarStyle="insideOverlay" />  -->
+
+</RelativeLayout>
