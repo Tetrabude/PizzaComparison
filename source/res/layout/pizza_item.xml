@@ -34,8 +34,7 @@
 		    android:id="@+id/textA"
 		    android:layout_toRightOf="@+id/textViewName"
 			android:layout_height="wrap_content"
-			android:text="á"
-			android:layout_marginLeft="1dp"
+			android:text=" á "
 			android:layout_width="wrap_content" android:textSize="20sp"></TextView>
 		
 		<TextView
@@ -43,7 +42,6 @@
 		    android:layout_toRightOf="@+id/textA"
 			android:layout_height="wrap_content"
 			android:text="5"
-			android:layout_marginLeft="1dp"
 			android:layout_width="wrap_content" android:textSize="20sp"></TextView>
 
 		<TextView
