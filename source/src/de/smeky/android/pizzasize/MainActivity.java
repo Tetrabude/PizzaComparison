@@ -14,14 +14,23 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
+import android.view.View.OnCreateContextMenuListener;
+import android.view.View.OnLongClickListener;
 import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class MainActivity extends ListActivity implements OnItemClickListener, OnClickListener {
+public class MainActivity extends ListActivity implements OnItemClickListener, OnClickListener, OnCreateContextMenuListener {
 	/** Called when the activity is first created. */
 	private List<Pizza> pizzaList;
 	private PizzaListAdapter pizzaAdapter;
@@ -35,6 +44,10 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		
+		// Kontextmenü
+		registerForContextMenu(getListView());
+		
+		
 		// GUI-Initialisieren:
 		
 		addRound = (ImageView) findViewById(R.id.imageViewAddRound);
@@ -44,6 +57,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		addRectangular.setOnClickListener(this);
 
 		getListView().setOnItemClickListener(this);
+	
 		
 		pizzaList = new ArrayList<Pizza>();
 
@@ -139,7 +153,6 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 			Log.e("MainActivity", "Weder Noch!!!");
 			return;
 		}
-		// intent = new Intent(this, PizzaEditRectangular.class);
 
 		intent.putExtra("id", (int) id);
 
@@ -192,6 +205,29 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		}
 		
 	}
+	
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+	                                ContextMenuInfo menuInfo) {
+	  super.onCreateContextMenu(menu, v, menuInfo);
+	  MenuInflater inflater = getMenuInflater();
+	  inflater.inflate(R.menu.pizza_item_kontext, menu);
+	}
+
+
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+	  AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+	  switch (item.getItemId()) {
+	  case R.id.delete:
+		  pizzaList.remove((int)info.id);
+		  pizzaAdapter.notifyDataSetChanged();
+	    return true;
+	  default:
+	    return super.onContextItemSelected(item);
+	  }
+	}
+
 }
 
 

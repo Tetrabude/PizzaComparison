@@ -70,7 +70,7 @@ public class PizzaListAdapter extends BaseAdapter {
 		holder.pizzaName.setText(tmpPiz.getPizzaName());
 		holder.pizzaSellingPrice.setText("" + Helper.doubleToCurrencyString(tmpPiz.getPrize()));
 		holder.pizzaSquarePrice.setText("" + Helper.doubleToCurrencyString(tmpPiz.getSquarePirce()));
-		holder.pizzaSquareSize.setText("" + tmpPiz.getSquareSize());
+		holder.pizzaSquareSize.setText("" + Helper.doubleToRealNumberString(tmpPiz.getSquareSize()));
 		holder.pizzaDimension.setText(tmpPiz.getDimension());
 		
 		if(tmpPiz.getClass() == PizzaRound.class) {
