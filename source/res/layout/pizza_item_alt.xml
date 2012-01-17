@@ -18,7 +18,7 @@
 		android:layout_alignTop="@+id/imageView1"
 		android:layout_alignBottom="@+id/imageView1"
 		android:layout_alignParentRight="true"
-		android:layout_marginRight="10px" android:layout_marginBottom="5px" android:layout_marginTop="5px">
+		android:layout_marginRight="10px" android:layout_marginTop="5px" android:layout_marginBottom="5px">
 		<TextView
 			android:layout_alignParentLeft="true"
 			android:layout_height="wrap_content"
