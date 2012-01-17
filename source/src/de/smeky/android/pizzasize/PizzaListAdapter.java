@@ -40,19 +40,19 @@ public class PizzaListAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
 		
-		if(convertView==null){
+		if( convertView==null ){
 			convertView = mInflator.inflate(R.layout.pizza_item, parent,false);
 			holder = new ViewHolder();
-			holder.text = (TextView) convertView.findViewById(R.id.textView1);
+			holder.text = ( TextView ) convertView.findViewById(R.id.textView1);
 			
-			convertView.setTag(holder);
+			convertView.setTag( holder );
 		}else{
-			holder = (ViewHolder) convertView.getTag();
+			holder = ( ViewHolder ) convertView.getTag();
 		}
 		
-		holder.text.setText(pizzaData.get(position).getPizzaName());
+		holder.text.setText( pizzaData.get( position ).getPizzaName() );
 		
-		return null;
+		return convertView;
 	}
 
 }
