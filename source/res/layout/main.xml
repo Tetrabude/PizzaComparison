@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
+<RelativeLayout
+	android:id="@+id/relativeLayout1"
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-	<TextView
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:text="@string/hello" />
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
 	<ListView
+		android:id="@+android:id/list"
 		android:layout_height="wrap_content"
 		android:layout_width="fill_parent"
-		android:id="@+android:id/list"></ListView>
-
-</LinearLayout>
+		android:layout_alignParentTop="true"
+		android:layout_above="@+id/imageViewAddRound"></ListView>
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/pizza_eckig"
+		android:id="@+id/imageViewAddRectangular"
+		android:layout_below="@+android:id/list"
+		android:layout_alignRight="@+android:id/list"
+		android:clickable="true">
+	</ImageView>
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/pizza_rund"
+		android:id="@+id/imageViewAddRound"
+		android:layout_below="@+id/imageViewAddRound"
+		android:layout_alignLeft="@+id/imageViewAddRound"
+		android:layout_alignParentBottom="true"
+		android:clickable="true"></ImageView>
+</RelativeLayout>
+    

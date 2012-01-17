@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+    <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name"></TextView>
+	<EditText
+		android:id="@+id/txtName"
+		android:layout_height="wrap_content"
+		android:text="Name"
+		android:layout_width="match_parent"></EditText>
+	<TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/width"></TextView>
+	<EditText
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/txtWidth" android:text="Width"></EditText>
+	<TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/length"></TextView>
+	<EditText
+		android:layout_height="wrap_content"
+		android:text="Height"
+		android:layout_width="match_parent"
+		android:id="@+id/txtHeight"></EditText>
+	<TextView android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price"></TextView>
+	<EditText
+		android:layout_height="wrap_content"
+		android:text="Price"
+		android:layout_width="match_parent"
+		android:id="@+id/txtSellingPrice"></EditText>
+	<Button
+		android:layout_height="wrap_content"
+		android:id="@+id/btnSave" android:text="@string/save" android:layout_width="match_parent"></Button>
+
+</LinearLayout>
