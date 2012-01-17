@@ -15,7 +15,7 @@
 	<RelativeLayout
 	    android:id="@+id/relativeLayout2"
 	    android:layout_width="wrap_content"
-	    android:layout_height="60px"
+	    android:layout_height="70px"
 	    android:layout_alignParentRight="true"
 	    android:layout_alignTop="@+id/imageView1"
 	    android:layout_marginRight="10px"
@@ -24,39 +24,95 @@
 	    android:layout_toRightOf="@+id/imageView1" >
 
 		<TextView
+		    android:id="@+id/textViewName"  
 			android:layout_alignParentLeft="true"
 			android:layout_height="wrap_content"
-			android:id="@+id/textViewName"
 			android:text="Pizza1"
-			android:layout_width="wrap_content"></TextView>
+			android:layout_width="wrap_content" android:textSize="30px"></TextView>
+		
 		<TextView
+		    android:id="@+id/textA"
+		    android:layout_toRightOf="@+id/textViewName"
 			android:layout_height="wrap_content"
-			android:id="@+id/textViewSquareSize"
-			android:layout_alignParentBottom="true"
-			android:layout_alignParentRight="true"
-			android:text="30cm²"
-			android:layout_width="wrap_content"></TextView>
+			android:text="á"
+			android:layout_marginLeft="5px"
+			android:layout_width="wrap_content" android:textSize="30px"></TextView>
+		
 		<TextView
-			android:layout_toLeftOf="@+id/textViewSquarePriceUnit"
+		    android:id="@+id/textViewSellingPrice"
+		    android:layout_toRightOf="@+id/textA"
 			android:layout_height="wrap_content"
-			android:id="@+id/textViewSquarePrice"
-			android:text="0.5"
-			android:layout_width="wrap_content"
-			android:layout_alignParentRight="true"></TextView>
+			android:text="5"
+			android:layout_marginLeft="5px"
+			android:layout_width="wrap_content" android:textSize="30px"></TextView>
 
 		<TextView
+		    android:id="@+id/textViewSellingPriceUnit"
+		    android:layout_toRightOf="@+id/textViewSellingPrice"
 			android:layout_height="wrap_content"
-			android:id="@+id/textViewSellingPrice"
-			android:layout_alignParentBottom="true"
-			android:layout_centerHorizontal="true"
-			android:text="5"
-			android:layout_width="wrap_content"></TextView>
+			android:text=" €"
+			android:layout_width="wrap_content" android:textSize="30px"></TextView>
+
 		<TextView
+		    android:id="@+id/textViewDimension"
 			android:layout_height="wrap_content"
-			android:id="@+id/textViewDimension"
 			android:layout_alignParentBottom="true"
 			android:text="5x6"
 			android:layout_width="wrap_content"></TextView>
+		
+				
+		<TextView
+		    android:id="@+id/textViewEquals"
+		    android:layout_toRightOf="@+id/textViewDimension"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:text=" = "
+			android:layout_width="wrap_content"></TextView>
+			
+		<TextView
+		    android:id="@+id/textViewSquareSize"
+		    android:layout_toRightOf="@+id/textViewEquals"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:text="30"
+			android:layout_width="wrap_content"></TextView>
+		
+		<TextView
+		    android:id="@+id/textViewSquareSizeUnit"
+		    android:layout_toRightOf="@+id/textViewSquareSize"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:text=" cm²"
+			android:layout_width="wrap_content"></TextView>
+
+			<RelativeLayout
+		    android:id="@+id/relativeLayout3"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_alignParentRight="true"
+		    android:layout_marginRight="10px"
+		    android:layout_marginTop="5px"
+		    android:layout_marginLeft="5px" >
+			
+			<TextView
+			    android:id="@+id/textViewSquarePrice"
+				android:layout_height="wrap_content"
+				android:text="0.5"
+				android:layout_width="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerInParent="true"
+				android:textSize="40px"></TextView>
+			
+			<TextView
+			    android:id="@+id/textViewSquarePriceUnit"
+				android:layout_height="wrap_content"
+				android:text=" €/m²"
+				android:layout_width="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_centerInParent="true"
+				></TextView>		
+			</RelativeLayout>
+		
 	</RelativeLayout>
 
 </RelativeLayout>
