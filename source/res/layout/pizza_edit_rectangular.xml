@@ -9,24 +9,24 @@
 		android:id="@+id/txtName"
 		android:layout_height="wrap_content"
 		android:text="Name"
-		android:layout_width="match_parent"></EditText>
+		android:layout_width="match_parent" android:inputType="text"></EditText>
 	<TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/width"></TextView>
 	<EditText
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
-		android:id="@+id/txtWidth" android:text="Width"></EditText>
+		android:id="@+id/txtWidth" android:text="Width" android:inputType="numberDecimal"></EditText>
 	<TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/length"></TextView>
 	<EditText
 		android:layout_height="wrap_content"
 		android:text="Height"
 		android:layout_width="match_parent"
-		android:id="@+id/txtHeight"></EditText>
+		android:id="@+id/txtHeight" android:inputType="numberDecimal"></EditText>
 	<TextView android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price"></TextView>
 	<EditText
 		android:layout_height="wrap_content"
 		android:text="Price"
 		android:layout_width="match_parent"
-		android:id="@+id/txtSellingPrice"></EditText>
+		android:id="@+id/txtSellingPrice" android:inputType="numberDecimal"></EditText>
 	<Button
 		android:layout_height="wrap_content"
 		android:id="@+id/btnSave" android:text="@string/save" android:layout_width="match_parent"></Button>
