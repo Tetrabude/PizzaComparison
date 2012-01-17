@@ -11,7 +11,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-/* I will be back  (Egoist) */
+
 public class MainActivity extends ListActivity {
     /** Called when the activity is first created. */
 	private List<Pizza> pizzaList;
