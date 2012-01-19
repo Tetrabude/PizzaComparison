@@ -19,13 +19,13 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:text="Name" 
-        android:layout_below="@+id/txtLabelName">
+        android:layout_below="@+id/textViewName">
     </EditText>
 
 
     <Button
         android:id="@+id/btnSave"
-         android:layout_below="@+id/txtViewName"
+         android:layout_below="@+id/textViewName"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -34,7 +34,7 @@
     
     <TextView
         android:id="@+id/textViewWidth"
-        android:layout_below="@+id/btnSave"
+        android:layout_below="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/width" >

@@ -34,6 +34,8 @@ public class PizzaEditRound extends PizzaEdit implements OnSeekBarChangeListener
         
         diameterSeekBar = (SeekBar)findViewById(R.id.seekBarDiameter);
         diameterSeekBar.setOnSeekBarChangeListener(this);
+        
+        equalizeSeekBarWithText(R.id.txtDiameter, R.id.seekBarDiameter);
                 
     }
 
@@ -77,24 +79,31 @@ public class PizzaEditRound extends PizzaEdit implements OnSeekBarChangeListener
 		
 		case R.id.txtDiameter:
 			
-			if(!txtDiameter.getText().toString().equals(""))
-			{
-		
-			
-			int sekDiameter = diameterSeekBar.getProgress();
-			int diameter = Integer.valueOf(txtDiameter.getText().toString());
-						
-			
-			if(sekDiameter != diameter){
-				diameterSeekBar.setProgress(diameter);
-			}
-			}
+			equalizeSeekBarWithText(R.id.txtDiameter, R.id.seekBarDiameter);
 			break;
 			
 		}
 			
 		return false;
 	}
+	
+	/*TODO Helper? */
+	private void equalizeSeekBarWithText(int textId, int seekBarId) {
+		EditText eText = (EditText) findViewById(textId);
+		SeekBar sBar = (SeekBar)findViewById(seekBarId);
+		
+		if(!eText.getText().toString().equals(""))
+		{
 
+		
+		int sekWidth =  sBar.getProgress();
+		int width = Integer.valueOf(eText.getText().toString());
+					
+		
+		if(sekWidth != width){
+			sBar.setProgress(width);
+		}
+		}
+	}
 	
 }
