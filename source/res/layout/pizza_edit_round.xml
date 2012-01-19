@@ -74,7 +74,9 @@
         android:inputType="numberDecimal"
         android:text="100.55" >
     </EditText>
-
+    
+    
+</RelativeLayout>
     
  <!--    
 
@@ -97,4 +99,3 @@
         android:layout_below="@+id/txtDiameter"
         android:scrollbarStyle="insideOverlay" />  -->
 
-</RelativeLayout>
