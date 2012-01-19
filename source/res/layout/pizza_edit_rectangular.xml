@@ -1,34 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
+<RelativeLayout
+	android:id="@+id/relativeLayout1"
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-    <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name"></TextView>
-	<EditText
-		android:id="@+id/txtName"
-		android:layout_height="wrap_content"
-		android:text="Name"
-		android:layout_width="match_parent" android:inputType="text"></EditText>
-	<TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/width"></TextView>
-	<EditText
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:id="@+id/txtWidth" android:text="Width" android:inputType="numberDecimal"></EditText>
-	<TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/length"></TextView>
-	<EditText
-		android:layout_height="wrap_content"
-		android:text="Height"
-		android:layout_width="match_parent"
-		android:id="@+id/txtHeight" android:inputType="numberDecimal"></EditText>
-	<TextView android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price"></TextView>
-	<EditText
-		android:layout_height="wrap_content"
-		android:text="Price"
-		android:layout_width="match_parent"
-		android:id="@+id/txtSellingPrice" android:inputType="numberDecimal"></EditText>
-	<Button
-		android:layout_height="wrap_content"
-		android:id="@+id/btnSave" android:text="@string/save" android:layout_width="match_parent"></Button>
+	android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_toLeftOf="@+id/btnSave"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Name" 
+        android:layout_below="@+id/txtLabelName">
+    </EditText>
+
+
+    <Button
+        android:id="@+id/btnSave"
+         android:layout_below="@+id/txtViewName"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/save" >
+    </Button>
+    
+    <TextView
+        android:id="@+id/textViewWidth"
+        android:layout_below="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/width" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtWidth"
+        android:layout_below="@+id/textViewWidth"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="30" >
+    </EditText>
+    
+  <SeekBar
+        android:id="@+id/seekBarWidth"
+         android:layout_below="@+id/textViewWidth"
+        android:layout_toRightOf="@+id/txtWidth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:scrollbarStyle="insideOverlay" />
+
+    <TextView
+        android:id="@+id/textViewHeight"
+        android:layout_below="@+id/txtWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/length" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtHeight"
+        android:layout_below="@+id/textViewHeight"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="20" >
+    </EditText>
+    
+         <SeekBar
+        android:id="@+id/seekBarHeight"
+         android:layout_below="@+id/textViewHeight"
+        android:layout_toRightOf="@+id/txtHeight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:scrollbarStyle="insideOverlay" />
+
+    <TextView
+        android:id="@+id/textViewSellingPrice"
+        android:layout_below="@+id/txtHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtSellingPrice"
+        android:layout_below="@+id/textViewSellingPrice"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="100.55" >
+    </EditText>
+
+ -->
+</RelativeLayout>
