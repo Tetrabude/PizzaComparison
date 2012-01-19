@@ -44,6 +44,9 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
         
         heightSeekBar = (SeekBar)findViewById(R.id.seekBarHeight);
         heightSeekBar.setOnSeekBarChangeListener(this);
+        
+        equalizeSeekBarWithText(R.id.txtWidth, R.id.seekBarWidth);
+        equalizeSeekBarWithText(R.id.txtHeight, R.id.seekBarHeight);
       
       
     }
@@ -55,6 +58,7 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
 		
 		if(v.equals(btnSave)){
 			newPizza = new PizzaRectangular();
+
 			((PizzaRectangular) newPizza).setWidth(Double.valueOf(txtWidth.getText().toString()));
 			
 			((PizzaRectangular) newPizza).setLength(Double.valueOf(txtHeight.getText().toString()));
@@ -62,7 +66,6 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
 
 		super.onClick(v);
 	}
-
 
 
 	@Override
@@ -109,40 +112,38 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
 			
 			case R.id.txtWidth:
 				
-				if(!txtWidth.getText().toString().equals(""))
-				{
-			
-				
-				int sekWidth = widthSeekBar.getProgress();
-				int width = Integer.valueOf(txtWidth.getText().toString());
-							
-				
-				if(sekWidth != width){
-					widthSeekBar.setProgress(width);
-				}
-				}
+				equalizeSeekBarWithText(R.id.txtWidth, R.id.seekBarWidth);
 				break;
 			
 			case R.id.txtHeight:
 				
-				if(!txtHeight.getText().toString().equals(""))
-				{
-			
-				
-				int sekWidth = heightSeekBar.getProgress();
-				int width = Integer.valueOf(txtHeight.getText().toString());
-							
-				
-				if(sekWidth != width){
-					heightSeekBar.setProgress(width);
-				}
-				}
+			    equalizeSeekBarWithText(R.id.txtHeight, R.id.seekBarHeight);
 				break;
 			
 				
 			}
 				
 			return false;
+		}
+
+
+
+		private void equalizeSeekBarWithText(int textId, int seekBarId) {
+			EditText eText = (EditText) findViewById(textId);
+			SeekBar sBar = (SeekBar)findViewById(seekBarId);
+			
+			if(!eText.getText().toString().equals(""))
+			{
+
+			
+			int sekWidth =  sBar.getProgress();
+			int width = Integer.valueOf(eText.getText().toString());
+						
+			
+			if(sekWidth != width){
+				sBar.setProgress(width);
+			}
+			}
 		}
 
 	
