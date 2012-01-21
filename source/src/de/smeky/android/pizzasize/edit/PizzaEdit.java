@@ -19,7 +19,7 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 	protected Button btnSave;
 	protected Pizza pizza;
 	protected Pizza newPizza;
-	protected int id;
+	protected int id; 
  
     @Override
     public void onCreate(Bundle savedInstanceState) {
