@@ -45,4 +45,12 @@ public class Helper {
 
 		return true;
 	}
+	
+	static public String getEuroString(double value){
+		return doubleToRealNumberString(Math.floor(value));
+	}
+	
+	static public String getCentString(double value){
+		return doubleToRealNumberString(Math.floor((value - Math.floor(value) ) * 100));
+	}
 }

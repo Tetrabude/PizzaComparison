@@ -8,6 +8,10 @@ import android.util.Log;
 
 public abstract class Pizza implements Parcelable, Serializable, Comparable<Pizza> {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8756388094912197617L;
 	private String pizzaName = "";
 	private double  sellingPrice = 0;
 	
