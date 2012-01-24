@@ -2,11 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativeLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="fill_parent"
+    android:background="#800000" 
+    >
 
     <TextView
         android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/name" >
     </TextView>
@@ -28,7 +30,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textViewName"
         android:layout_margin="5dp"
-        android:icon="@android:drawable/ic_menu_save" >
+        android:background="@android:drawable/ic_menu_save" >
     </Button>
 
     <TextView
@@ -85,10 +87,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewLength"
-                android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/txtLength"
         android:max="60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
@@ -150,13 +152,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSellingPriceCent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:max="60"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:thumb="@drawable/pizza_button" >
+        android:thumb="@drawable/euro" >
     </SeekBar>
 
     <SeekBar
@@ -164,13 +166,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBarEuro"
-                android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:max="99"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:thumb="@drawable/pizza_button" >
+        android:thumb="@drawable/cent" >
     </SeekBar>
 
 </RelativeLayout>

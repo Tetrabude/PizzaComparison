@@ -16,4 +16,5 @@
     <string name="error_length">Fehlerhafte Länge</string>
     <string name="error_name">Fehlerhafter Name</string>
     <string name="error_price">Fehlerhafter Preis</string>
+    <string name="rot">#800000</string>
 </resources>
