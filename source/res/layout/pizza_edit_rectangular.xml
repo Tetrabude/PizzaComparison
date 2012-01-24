@@ -28,7 +28,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textViewName"
         android:layout_margin="5dp"
-        android:background="@drawable/pizza_background" >
+        android:icon="@android:drawable/ic_menu_save" >
     </Button>
 
     <TextView
@@ -53,12 +53,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewWidth"
-        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/txtWidth"
+        android:max="60"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:max="60"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
 
@@ -84,12 +85,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewLength"
-        android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/txtLength"
+        android:max="60"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:max="60"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
 
@@ -100,73 +102,75 @@
         android:layout_below="@+id/txtLength"
         android:text="@string/price" >
     </TextView>
-    
+
     <EditText
         android:id="@+id/txtSellingPriceEuro"
-         android:layout_below="@+id/textViewSellingPrice"
-         android:layout_toLeftOf="@+id/txtLabelSellingPriceDot"
         android:layout_width="75dp"
-        android:gravity="right|center"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSellingPrice"
+        android:layout_toLeftOf="@+id/txtLabelSellingPriceDot"
+        android:gravity="right|center"
         android:inputType="number"
         android:text="100" >
     </EditText>
-    
-          <TextView
+
+    <TextView
         android:id="@+id/txtLabelSellingPriceDot"
-		android:layout_alignBottom="@+id/txtSellingPriceCent"
-          android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="." android:textSize="30dp">
+        android:layout_alignBottom="@+id/txtSellingPriceCent"
+        android:layout_centerHorizontal="true"
+        android:text="."
+        android:textSize="30dp" >
     </TextView>
-    
-        <EditText
+
+    <EditText
         android:id="@+id/txtSellingPriceCent"
-         android:layout_below="@+id/textViewSellingPrice"
-         android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
-         android:maxLength="2"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSellingPrice"
+        android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
         android:inputType="number"
-        android:text="55">
+        android:maxLength="2"
+        android:text="55" >
     </EditText>
 
-                  <TextView
+    <TextView
         android:id="@+id/txtLabelSellingPriceCurrency"
-		android:layout_alignBottom="@+id/txtSellingPriceCent"
-          android:layout_toRightOf="@+id/txtSellingPriceCent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/currency" android:textSize="30dp">
+        android:layout_alignBottom="@+id/txtSellingPriceCent"
+        android:layout_toRightOf="@+id/txtSellingPriceCent"
+        android:text="@string/currency"
+        android:textSize="30dp" >
     </TextView>
-        
-        
-            <SeekBar
+
+    <SeekBar
         android:id="@+id/seekBarEuro"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSellingPriceCent"
-        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:max="60"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:max="60"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
-    
-     <SeekBar
+
+    <SeekBar
         android:id="@+id/seekBarCent"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBarEuro"
-        android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:max="99"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:max="99"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
-    
 
 </RelativeLayout>
