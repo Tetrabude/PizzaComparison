@@ -77,7 +77,6 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		if(savedInstanceState != null){
 			pizzaList = savedInstanceState.getParcelableArrayList("pizzalist");
 		} else {
-	//		pizzaList = createTestPizzaList();			
 			pizzaList = loadPizzaListFromFile();
 		}
 		
@@ -104,6 +103,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 			fis.close();
 			
 			return pList;
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -116,15 +116,16 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 		
-		return null;
+		return createTestPizzaList();		
+		
 	}
 	
 	
 	private ArrayList<Pizza> createTestPizzaList() {
 		
-		
+	
 		
 		ArrayList<Pizza> list = new ArrayList<Pizza>();
 		
@@ -160,25 +161,6 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		pizza9.setWidth(30.0);
 		list.add(pizza9);
 
-//		PizzaRound pizza7 = new PizzaRound();
-//		pizza7.setPizzaName("Logmuschi Pizza");
-//		pizza7.setPrize(2.0);
-//		pizza7.setDiameter(4.0);
-//		list.add(pizza7);
-//
-//		PizzaRound pizza8 = new PizzaRound();
-//		pizza8.setPizzaName("Pizza8");
-//		pizza8.setPrize(4.0);
-//		pizza8.setDiameter(2.0);
-//		list.add(pizza8);
-//
-//
-//		PizzaRectangular pizza10 = new PizzaRectangular();
-//		pizza10.setPizzaName("Neunte Pizza plus eins");
-//		pizza10.setPrize(2.0);
-//		pizza10.setLength(3.0);
-//		pizza10.setWidth(4.0);
-//		list.add(pizza10);
 
 		return list;
 	}
