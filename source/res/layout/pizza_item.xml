@@ -29,35 +29,40 @@
 			android:layout_alignParentLeft="true"
 			android:layout_height="wrap_content"
 			android:text="Pizza1"
-			android:layout_width="wrap_content" android:textSize="20sp"></TextView>
+			android:layout_width="wrap_content" android:textSize="20sp" 
+			android:textColor="@color/pizza_item_text"></TextView>
 		
 		<TextView
 		    android:id="@+id/textA"
 		    android:layout_toRightOf="@+id/textViewName"
 			android:layout_height="wrap_content"
 			android:text=" á "
-			android:layout_width="wrap_content" android:textSize="20sp"></TextView>
+			android:layout_width="wrap_content" android:textSize="20sp"
+			android:textColor="@color/pizza_item_text"></TextView>
 		
 		<TextView
 		    android:id="@+id/textViewSellingPrice"
 		    android:layout_toRightOf="@+id/textA"
 			android:layout_height="wrap_content"
 			android:text="5"
-			android:layout_width="wrap_content" android:textSize="20sp"></TextView>
+			android:layout_width="wrap_content" android:textSize="20sp"
+			android:textColor="@color/pizza_item_text"></TextView>
 
 		<TextView
 		    android:id="@+id/textViewSellingPriceUnit"
 		    android:layout_toRightOf="@+id/textViewSellingPrice"
 			android:layout_height="wrap_content"
 			android:text=" €"
-			android:layout_width="wrap_content" android:textSize="20sp"></TextView>
+			android:layout_width="wrap_content" android:textSize="20sp"
+			android:textColor="@color/pizza_item_text"></TextView>
 
 		<TextView
 		    android:id="@+id/textViewDimension"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:text="5x6"
-			android:layout_width="wrap_content" android:textSize="15sp"></TextView>
+			android:layout_width="wrap_content" android:textSize="15sp"
+			android:textColor="@color/pizza_item_text"></TextView>
 		
 				
 		<TextView
@@ -66,7 +71,8 @@
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:text=" = "
-			android:layout_width="wrap_content" android:textSize="15sp"></TextView>
+			android:layout_width="wrap_content" android:textSize="15sp"
+			android:textColor="@color/pizza_item_text"></TextView>
 			
 		<TextView
 		    android:id="@+id/textViewSquareSize"
@@ -74,7 +80,7 @@
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:text="30"
-			
+			android:textColor="@color/pizza_item_text"
 			android:layout_width="wrap_content" android:textSize="15sp"></TextView>
 		
 		<TextView
@@ -83,7 +89,8 @@
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:text=" cm²"
-			android:layout_width="wrap_content" android:textSize="15sp"></TextView>
+			android:layout_width="wrap_content" android:textSize="15sp"
+			android:textColor="@color/pizza_item_text"></TextView>
 
 			<RelativeLayout
 		    android:id="@+id/relativeLayout3"
@@ -101,7 +108,8 @@
 				android:layout_width="wrap_content"
 				android:layout_alignParentTop="true"
 				android:layout_centerInParent="true"
-				android:textSize="25sp"></TextView>
+				android:textSize="25sp"
+				android:textColor="@color/pizza_item_text"></TextView>
 			
 			<TextView
 			    android:id="@+id/textViewSquarePriceUnit"
@@ -110,7 +118,8 @@
 				android:layout_width="wrap_content"
 				android:layout_alignParentBottom="true"
 				android:layout_centerInParent="true"
-				android:textSize="15sp"></TextView>		
+				android:textSize="15sp"
+				android:textColor="@color/pizza_item_text"></TextView>		
 			</RelativeLayout>
 		
 	</RelativeLayout>
