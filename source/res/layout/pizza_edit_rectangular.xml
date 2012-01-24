@@ -20,6 +20,7 @@
         android:layout_below="@+id/textViewName"
         android:layout_toLeftOf="@+id/btnSave"
         android:inputType="text"
+        android:selectAllOnFocus="true"
         android:text="Name" >
     </EditText>
 
@@ -30,7 +31,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textViewName"
         android:layout_margin="5dp"
-        android:background="@android:drawable/ic_menu_save" >
+        android:background="@drawable/diskette" >
     </Button>
 
     <TextView
@@ -47,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewWidth"
         android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
         android:text="30" >
     </EditText>
 
@@ -79,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewLength"
         android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
         android:text="20" >
     </EditText>
 
@@ -113,6 +116,7 @@
         android:layout_toLeftOf="@+id/txtLabelSellingPriceDot"
         android:gravity="right|center"
         android:inputType="number"
+        android:selectAllOnFocus="true"
         android:text="100" >
     </EditText>
 
@@ -134,6 +138,7 @@
         android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
         android:inputType="number"
         android:maxLength="2"
+        android:selectAllOnFocus="true"
         android:text="55" >
     </EditText>
 
@@ -152,7 +157,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSellingPriceCent"
-        android:max="60"
+        android:max="30"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:progress="0"

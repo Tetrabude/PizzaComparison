@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:text="Name" 
+        android:selectAllOnFocus="true"
         android:layout_below="@+id/txtLabelName"
         >
     </EditText>
@@ -31,7 +32,7 @@
         android:layout_height="40dp"
         android:layout_margin="5dp"
         android:layout_alignParentRight="true"
-      android:background="@android:drawable/ic_menu_save">
+      android:background="@drawable/diskette">
     </Button>
     
    <TextView
@@ -48,6 +49,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
         android:text="75" >
     </EditText>
     
@@ -83,6 +85,7 @@
         android:gravity="right|center"
         android:layout_height="wrap_content"
         android:inputType="number"
+        android:selectAllOnFocus="true"
         android:text="100" >
     </EditText>
     
@@ -92,6 +95,7 @@
           android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:selectAllOnFocus="true"
         android:text="." android:textSize="30dp">
     </TextView>
     
@@ -102,6 +106,7 @@
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:inputType="number"
+        android:selectAllOnFocus="true"
         android:text="55" >
     </EditText>
     
@@ -126,7 +131,7 @@
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:max="60"
+        android:max="30"
         android:thumb="@drawable/euro" >
     </SeekBar>
     
