@@ -1,10 +1,12 @@
 package de.smeky.android.pizzasize.pizza;
 
+import java.io.Serializable;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-public abstract class Pizza implements Parcelable, Comparable<Pizza> {
+public abstract class Pizza implements Parcelable, Serializable, Comparable<Pizza> {
 	
 	private String pizzaName = "";
 	private double  sellingPrice = 0;
@@ -58,9 +60,9 @@ public abstract class Pizza implements Parcelable, Comparable<Pizza> {
 	}
 	
     // Die Methode wird durch Comparable vorgeschrieben.
-    // Wenn "this < argument" dann muss die Methode irgendetwas < 0 zurückgeben
-    // Wenn "this = argument" dann muss die Methode 0 (irgendetwas = 0) zurückgeben
-    // Wenn "this > argument" dann muss die Methode irgendetwas > 0 zurückgeben        
+    // Wenn "this < argument" dann muss die Methode irgendetwas < 0 zurï¿½ckgeben
+    // Wenn "this = argument" dann muss die Methode 0 (irgendetwas = 0) zurï¿½ckgeben
+    // Wenn "this > argument" dann muss die Methode irgendetwas > 0 zurï¿½ckgeben        
     public int compareTo( Pizza argument ) {
         if( getSquarePirce() < argument.getSquarePirce() )
             return -1;

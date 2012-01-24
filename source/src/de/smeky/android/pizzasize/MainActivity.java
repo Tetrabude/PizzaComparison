@@ -1,6 +1,13 @@
 package de.smeky.android.pizzasize;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.ObjectOutputStream.PutField;
+import java.io.StreamCorruptedException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +19,10 @@ import de.smeky.android.pizzasize.pizza.PizzaRound;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuInflater;
@@ -33,6 +42,9 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends ListActivity implements OnItemClickListener, OnClickListener, OnCreateContextMenuListener {
 	/** Called when the activity is first created. */
+
+	private static final String FILENAME = "pizzalist";
+	
 	private ArrayList<Pizza> pizzaList;
 	private PizzaListAdapter pizzaAdapter;
 	private static final int PIZZA_REQUEST = 1;
@@ -60,16 +72,13 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		addRectangular.setOnClickListener(this);
 
 		getListView().setOnItemClickListener(this);
-	
-		
-		pizzaList = new ArrayList<Pizza>();
 
+		
 		if(savedInstanceState != null){
 			pizzaList = savedInstanceState.getParcelableArrayList("pizzalist");
 		} else {
-		
-			pizzaList = createTestPizzaList();
-
+	//		pizzaList = createTestPizzaList();			
+			pizzaList = loadPizzaListFromFile();
 		}
 		
 		pizzaAdapter = new PizzaListAdapter(this, pizzaList);
@@ -80,8 +89,43 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		pizzaAdapter.notifyDataSetChanged();
 
 	}
+	
 
+	private ArrayList<Pizza> loadPizzaListFromFile(){
+		
+		try {
+
+			FileInputStream fis;
+			fis = openFileInput(FILENAME);
+
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			ArrayList<Pizza> pList = (ArrayList<Pizza>) ois.readObject();
+			ois.close();
+			fis.close();
+			
+			return pList;
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (StreamCorruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	
 	private ArrayList<Pizza> createTestPizzaList() {
+		
+		
+		
 		ArrayList<Pizza> list = new ArrayList<Pizza>();
 		
 		PizzaRound pizza2 = new PizzaRound();
@@ -151,12 +195,12 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		if (intentPizza.getClass() == PizzaRound.class) {
 			Log.i("MainActivity", "Rund");
 			intent = new Intent(this, PizzaEditRound.class);
-			intent.putExtra("pizza", intentPizza);
+			intent.putExtra("pizza", (Parcelable) intentPizza);
 
 		} else if (intentPizza.getClass() == PizzaRectangular.class) {
 			Log.i("MainActivity", "Eckig");
 			intent = new Intent(this, PizzaEditRectangular.class);
-			intent.putExtra("pizza", intentPizza);
+			intent.putExtra("pizza", (Parcelable) intentPizza);
 
 		} else {
 			Log.e("MainActivity", "Weder Noch!!!");
@@ -243,6 +287,32 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		outState.putParcelableArrayList("pizzalist", pizzaList);
 	}
 	
+	@Override
+	protected void onStop() {
+		super.onStop();
+		
+		String test = "test";
+		
+		
+		
+		
+		try {
+			FileOutputStream fos;
+			fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+			oos.writeObject(pizzaList);
+			oos.close();
+			fos.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 }
 
 
