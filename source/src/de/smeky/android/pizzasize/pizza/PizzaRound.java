@@ -6,6 +6,8 @@ import android.os.Parcelable;
 
 public class PizzaRound extends Pizza {
 
+
+	private static final long serialVersionUID = -2751729540988485203L;
 	double diameter = 0;
 
 	public PizzaRound() {

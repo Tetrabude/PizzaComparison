@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-	android:id="@+id/relativeLayout1"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content"
-	xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
     <TextView
         android:id="@+id/textViewName"
@@ -14,101 +13,156 @@
 
     <EditText
         android:id="@+id/txtName"
-        android:layout_toLeftOf="@+id/btnSave"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewName"
+        android:layout_toLeftOf="@+id/btnSave"
         android:inputType="text"
-        android:text="Name" 
-        android:layout_below="@+id/textViewName">
+        android:text="Name" >
     </EditText>
-
 
     <Button
         android:id="@+id/btnSave"
-         android:layout_below="@+id/textViewName"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_margin="5dp"
         android:layout_alignParentRight="true"
-        android:background="@drawable/pizza_background">
+        android:layout_below="@+id/textViewName"
+        android:layout_margin="5dp"
+        android:background="@drawable/pizza_background" >
     </Button>
-    
+
     <TextView
         android:id="@+id/textViewWidth"
-        android:layout_below="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txtName"
         android:text="@string/width" >
     </TextView>
 
     <EditText
         android:id="@+id/txtWidth"
-        android:layout_below="@+id/textViewWidth"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWidth"
         android:inputType="numberDecimal"
         android:text="30" >
     </EditText>
-    
-  <SeekBar
+
+    <SeekBar
         android:id="@+id/seekBarWidth"
-         android:layout_below="@+id/textViewWidth"
-        android:layout_toRightOf="@+id/txtWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWidth"
         android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/txtWidth"
+        android:progress="0"
         android:scrollbarStyle="insideOverlay"
-                android:progress="0"
         android:secondaryProgress="0"
-        android:thumb="@drawable/pizza_button"
-        android:progressDrawable="@drawable/seek_bar_background"/>
+        android:thumb="@drawable/pizza_button" >
+    </SeekBar>
 
     <TextView
         android:id="@+id/textViewLength"
-        android:layout_below="@+id/txtWidth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWidth"
         android:text="@string/length" >
     </TextView>
 
     <EditText
         android:id="@+id/txtLength"
-        android:layout_below="@+id/textViewLength"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLength"
         android:inputType="numberDecimal"
         android:text="20" >
     </EditText>
-    
-         <SeekBar
+
+    <SeekBar
         android:id="@+id/seekBarLength"
-         android:layout_below="@+id/textViewLength"
-        android:layout_toRightOf="@+id/txtLength"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLength"
         android:layout_margin="5dp"
-        android:scrollbarStyle="insideOverlay"
+        android:layout_toRightOf="@+id/txtLength"
         android:progress="0"
+        android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:thumb="@drawable/pizza_button"
-        android:progressDrawable="@drawable/seek_bar_background" />
+        android:thumb="@drawable/pizza_button" >
+    </SeekBar>
 
     <TextView
         android:id="@+id/textViewSellingPrice"
-        android:layout_below="@+id/txtLength"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLength"
         android:text="@string/price" >
     </TextView>
-
+    
     <EditText
-        android:id="@+id/txtSellingPrice"
-        android:layout_below="@+id/textViewSellingPrice"
+        android:id="@+id/txtSellingPriceEuro"
+         android:layout_below="@+id/textViewSellingPrice"
+         android:layout_toLeftOf="@+id/txtLabelSellingPriceDot"
+        android:layout_width="75dp"
+        android:gravity="right|center"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="100" >
+    </EditText>
+    
+          <TextView
+        android:id="@+id/txtLabelSellingPriceDot"
+		android:layout_alignBottom="@+id/txtSellingPriceCent"
+          android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="." android:textSize="30dp">
+    </TextView>
+    
+        <EditText
+        android:id="@+id/txtSellingPriceCent"
+         android:layout_below="@+id/textViewSellingPrice"
+         android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
+         android:maxLength="2"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:text="100.55" >
+        android:inputType="number"
+        android:text="55">
     </EditText>
 
- -->
+                  <TextView
+        android:id="@+id/txtLabelSellingPriceCurrency"
+		android:layout_alignBottom="@+id/txtSellingPriceCent"
+          android:layout_toRightOf="@+id/txtSellingPriceCent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currency" android:textSize="30dp">
+    </TextView>
+        
+        
+            <SeekBar
+        android:id="@+id/seekBarEuro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSellingPriceCent"
+        android:layout_margin="5dp"
+        android:progress="0"
+        android:scrollbarStyle="insideOverlay"
+        android:secondaryProgress="0"
+        android:thumb="@drawable/pizza_button" >
+    </SeekBar>
+    
+     <SeekBar
+        android:id="@+id/seekBarCent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarEuro"
+        android:layout_margin="5dp"
+        android:progress="0"
+        android:scrollbarStyle="insideOverlay"
+        android:secondaryProgress="0"
+        android:thumb="@drawable/pizza_button" >
+    </SeekBar>
+    
+
 </RelativeLayout>

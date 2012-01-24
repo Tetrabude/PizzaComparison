@@ -5,20 +5,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Toast;
 import de.smeky.android.pizzasize.Helper;
 import de.smeky.android.pizzasize.R;
 import de.smeky.android.pizzasize.pizza.Pizza;
 
-public abstract class PizzaEdit extends Activity implements OnClickListener {
+public abstract class PizzaEdit extends Activity implements OnClickListener, OnKeyListener, OnSeekBarChangeListener {
 
 	protected EditText txtName;
-	protected EditText txtSellingPrice;
+	//protected EditText txtSellingPrice;
+	protected EditText txtSellingPriceEuro;
+	protected EditText txtSellingPriceCent;
+	protected SeekBar sbSellingPriceEuro;
+	protected SeekBar sbSellingPriceCent;
 	// EditText txtDiameter;
 	protected Button btnSave;
 	protected Pizza pizza;
@@ -30,9 +37,21 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 
 		txtName = (EditText) findViewById(R.id.txtName);
-		txtSellingPrice = (EditText) findViewById(R.id.txtSellingPrice);
+		//txtSellingPrice = (EditText) findViewById(R.id.txtSellingPriceEuro);
 		btnSave = (Button) findViewById(R.id.btnSave);
 		btnSave.setOnClickListener(this);
+		
+		txtSellingPriceEuro = (EditText) findViewById(R.id.txtSellingPriceEuro);
+		txtSellingPriceEuro.setOnKeyListener(this);
+		
+		txtSellingPriceCent = (EditText) findViewById(R.id.txtSellingPriceCent);
+		txtSellingPriceCent.setOnKeyListener(this);
+
+		sbSellingPriceEuro = (SeekBar) findViewById(R.id.seekBarEuro);
+		sbSellingPriceEuro.setOnSeekBarChangeListener(this);
+
+		sbSellingPriceCent = (SeekBar) findViewById(R.id.seekBarCent);
+		sbSellingPriceCent.setOnSeekBarChangeListener(this);
 
 		pizza = (Pizza) getIntent().getExtras().get("pizza");
 
@@ -41,8 +60,16 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 		}
 
 		txtName.setText(pizza.getPizzaName());
-		txtSellingPrice.setText("" + pizza.getPrize());
+		
+		
+		
+		txtSellingPriceEuro.setText(
+				Helper.getEuroString(pizza.getPrize()));
+		txtSellingPriceCent.setText(Helper.getCentString(pizza.getPrize()));
 		id = getIntent().getExtras().getInt("id", -1);
+		
+		synchronizeTextToSeekBar(R.id.txtSellingPriceEuro, R.id.seekBarEuro);
+		synchronizeTextToSeekBar(R.id.txtSellingPriceCent, R.id.seekBarCent);
 
 	}
 
@@ -54,8 +81,10 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 
 			newPizza.setPizzaName(txtName.getText().toString());
 			Log.i("PizzaEdit", "Pizza Name: " + txtName.getText().toString());
-			newPizza.setPrize(Double.valueOf(txtSellingPrice.getText()
-					.toString()));
+			
+			double price = Double.valueOf(txtSellingPriceEuro.getText().toString());
+			price += Double.valueOf(txtSellingPriceCent.getText().toString())* 0.01;
+			newPizza.setPrize(price);
 			// piz.setDiameter(Double.valueOf(txtDiameter.getText().toString()));
 
 			intent.putExtra("id", id);
@@ -67,6 +96,43 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 		}
 
 	}
+	
+	public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+		switch (v.getId()) {
+
+		case R.id.txtSellingPriceEuro:
+
+			synchronizeTextToSeekBar(R.id.txtSellingPriceEuro, R.id.seekBarEuro);
+			break;
+		case R.id.txtSellingPriceCent:
+
+			synchronizeTextToSeekBar(R.id.txtSellingPriceCent, R.id.seekBarCent);
+			break;
+
+		}
+
+		return false;
+	}
+	
+	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+		switch (seekBar.getId()) {
+
+		case R.id.seekBarEuro:
+			if (fromUser) {
+				synchronizeSeekBarToText(R.id.txtSellingPriceEuro, R.id.seekBarEuro);
+			}
+			break;
+		case R.id.seekBarCent:
+
+			if (fromUser) {
+				synchronizeSeekBarToText(R.id.txtSellingPriceCent, R.id.seekBarCent);
+			}
+			break;
+		}
+
+	}
 
 	protected boolean checkValues() {
 		if (txtName.getText().toString().length() <= 0) {
@@ -74,7 +140,12 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 			return false;
 		}
 		
-		if (!Helper.checkDoubleIsPositive(txtSellingPrice.getText().toString(),
+		if (!Helper.checkDoubleIsPositive(txtSellingPriceEuro.getText().toString(),
+				R.string.error_price, getApplicationContext())) {
+			return false;
+		}
+		
+		if (!Helper.checkDoubleIsPositive(txtSellingPriceCent.getText().toString(),
 				R.string.error_price, getApplicationContext())) {
 			return false;
 		}
@@ -94,6 +165,17 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 				sBar.setProgress(width);
 			}
 		}
+	}
+	
+	protected void synchronizeSeekBarToText(int textId, int seekBarId)
+	{
+		SeekBar sBar = (SeekBar) findViewById(seekBarId);
+		EditText eText = (EditText) findViewById(textId);
+		
+		String progressStringWidth = sBar.getProgress() + "";
+
+		eText.setText(progressStringWidth);
+		
 	}
 
 }

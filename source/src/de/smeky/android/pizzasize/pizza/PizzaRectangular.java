@@ -11,6 +11,8 @@ import android.os.Parcelable;
 public class PizzaRectangular extends Pizza {
 
 
+
+	private static final long serialVersionUID = 6749523652191602371L;
 	private double length = 0;
 	private double width = 0;
 

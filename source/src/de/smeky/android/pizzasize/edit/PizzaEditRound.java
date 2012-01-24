@@ -77,14 +77,21 @@ public class PizzaEditRound extends PizzaEdit implements
 		return new PizzaRound();
 	}
 
-	public void onProgressChanged(SeekBar seekBar, int progress,
-			boolean fromTouch) {
+	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
 		String progressString = progress + "";
 
-		if (fromTouch) {
-			txtDiameter.setText(progressString);
+		switch (seekBar.getId()) {
+
+		case R.id.seekBarDiameter:
+			if (fromUser) {
+				txtDiameter.setText(progressString);
+			}
+
+			break;
 		}
+
+		super.onProgressChanged(seekBar, progress, fromUser);
 	}
 
 	public void onStartTrackingTouch(SeekBar seekBar) {
@@ -106,6 +113,8 @@ public class PizzaEditRound extends PizzaEdit implements
 
 		}
 
+		super.onKey(v, keyCode, event);
+		
 		return false;
 	}
 
