@@ -64,7 +64,7 @@
         android:progressDrawable="@drawable/seek_bar_background"/>
 
     <TextView
-        android:id="@+id/textViewHeight"
+        android:id="@+id/textViewLength"
         android:layout_below="@+id/txtWidth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,8 +72,8 @@
     </TextView>
 
     <EditText
-        android:id="@+id/txtHeight"
-        android:layout_below="@+id/textViewHeight"
+        android:id="@+id/txtLength"
+        android:layout_below="@+id/textViewLength"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -81,9 +81,9 @@
     </EditText>
     
          <SeekBar
-        android:id="@+id/seekBarHeight"
-         android:layout_below="@+id/textViewHeight"
-        android:layout_toRightOf="@+id/txtHeight"
+        android:id="@+id/seekBarLength"
+         android:layout_below="@+id/textViewLength"
+        android:layout_toRightOf="@+id/txtLength"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -95,7 +95,7 @@
 
     <TextView
         android:id="@+id/textViewSellingPrice"
-        android:layout_below="@+id/txtHeight"
+        android:layout_below="@+id/txtLength"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price" >

@@ -1,5 +1,6 @@
 package de.smeky.android.pizzasize;
 
+import java.io.ObjectOutputStream.PutField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +33,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends ListActivity implements OnItemClickListener, OnClickListener, OnCreateContextMenuListener {
 	/** Called when the activity is first created. */
-	private List<Pizza> pizzaList;
+	private ArrayList<Pizza> pizzaList;
 	private PizzaListAdapter pizzaAdapter;
 	private static final int PIZZA_REQUEST = 1;
 	
@@ -41,6 +42,8 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		
@@ -61,8 +64,14 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		
 		pizzaList = new ArrayList<Pizza>();
 
-		pizzaList = createTestPizzaList();
+		if(savedInstanceState != null){
+			pizzaList = savedInstanceState.getParcelableArrayList("pizzalist");
+		} else {
+		
+			pizzaList = createTestPizzaList();
 
+		}
+		
 		pizzaAdapter = new PizzaListAdapter(this, pizzaList);
 
 		setListAdapter(pizzaAdapter);
@@ -72,8 +81,8 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 
 	}
 
-	private List<Pizza> createTestPizzaList() {
-		List<Pizza> list = new ArrayList<Pizza>();
+	private ArrayList<Pizza> createTestPizzaList() {
+		ArrayList<Pizza> list = new ArrayList<Pizza>();
 		
 		PizzaRound pizza2 = new PizzaRound();
 		pizza2.setPizzaName("Mini");
@@ -228,6 +237,12 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 	  }
 	}
 
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putParcelableArrayList("pizzalist", pizzaList);
+	}
+	
 }
 
 

@@ -11,4 +11,9 @@
     <string name="save">Speichern</string>
     <string name="width">Breite</string>
     <string name="length">Länge</string>
+    <string name="error_diameter">Fehlerhafter Durchmesser</string>
+    <string name="error_width">Fehlerhafte Breite</string>
+    <string name="error_length">Fehlerhafte Länge</string>
+    <string name="error_name">Fehlerhafter Name</string>
+    <string name="error_price">Fehlerhafter Preis</string>
 </resources>

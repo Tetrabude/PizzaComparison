@@ -16,94 +16,97 @@ import de.smeky.android.pizzasize.R;
 import de.smeky.android.pizzasize.pizza.Pizza;
 import de.smeky.android.pizzasize.pizza.PizzaRound;
 
-public class PizzaEditRound extends PizzaEdit implements OnSeekBarChangeListener, OnKeyListener {
-	
+public class PizzaEditRound extends PizzaEdit implements
+		OnSeekBarChangeListener, OnKeyListener {
+
 	private EditText txtDiameter;
 	private SeekBar diameterSeekBar;
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-    	setContentView(R.layout.pizza_edit_round);
-    	super.onCreate(savedInstanceState);
-        
-        txtDiameter = (EditText) findViewById(R.id.txtDiameter);
 
-        PizzaRound temp = (PizzaRound) pizza;
-        
-        txtDiameter.setText(Helper.doubleToRealNumberString(temp.getDiameter()));
-        txtDiameter.setOnKeyListener(this);
-        
-        diameterSeekBar = (SeekBar)findViewById(R.id.seekBarDiameter);
-        diameterSeekBar.setOnSeekBarChangeListener(this);
-        
-        equalizeSeekBarWithText(R.id.txtDiameter, R.id.seekBarDiameter);
-                
-    }
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		setContentView(R.layout.pizza_edit_round);
+		super.onCreate(savedInstanceState);
 
-    @Override
+		txtDiameter = (EditText) findViewById(R.id.txtDiameter);
+
+		PizzaRound temp = (PizzaRound) pizza;
+
+		txtDiameter
+				.setText(Helper.doubleToRealNumberString(temp.getDiameter()));
+		txtDiameter.setOnKeyListener(this);
+
+		diameterSeekBar = (SeekBar) findViewById(R.id.seekBarDiameter);
+		diameterSeekBar.setOnSeekBarChangeListener(this);
+
+		synchronizeTextToSeekBar(R.id.txtDiameter, R.id.seekBarDiameter);
+
+	}
+
+	@Override
 	public void onClick(View v) {
-		
-		if(v.equals(btnSave)){
+
+		if (v.equals(btnSave) && checkValues()) {
 			newPizza = new PizzaRound();
-			((PizzaRound) newPizza).setDiameter(Double.valueOf(txtDiameter.getText().toString()));
+			((PizzaRound) newPizza).setDiameter(Double.valueOf(txtDiameter
+					.getText().toString()));
 		}
 
 		super.onClick(v);
 	}
 
 	@Override
-	protected Pizza getNewPizzaStore() {
-		return new PizzaRound(); 
+	protected boolean checkValues() {
+
+
+
+		if (!Helper.checkIntegerIsPositive(txtDiameter.getText().toString(),
+				R.string.error_diameter, getApplicationContext())) {
+			return false;
+		}
+		
+		
+		if (!super.checkValues()) {
+		return false;
+		}
+
+		return true;
 	}
 
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch) {
-        
-    	String progressString = progress +"";
-    	
-    	if(fromTouch) {
-        	txtDiameter.setText(progressString);
-        }
-    }
+	@Override
+	protected Pizza getNewPizzaStore() {
+		return new PizzaRound();
+	}
 
-    public void onStartTrackingTouch(SeekBar seekBar) {
-        
-    }
+	public void onProgressChanged(SeekBar seekBar, int progress,
+			boolean fromTouch) {
 
-    public void onStopTrackingTouch(SeekBar seekBar) {
-      
-    }
+		String progressString = progress + "";
 
+		if (fromTouch) {
+			txtDiameter.setText(progressString);
+		}
+	}
+
+	public void onStartTrackingTouch(SeekBar seekBar) {
+
+	}
+
+	public void onStopTrackingTouch(SeekBar seekBar) {
+
+	}
 
 	public boolean onKey(View v, int keyCode, KeyEvent event) {
-		
-		switch(v.getId()){
-		
+
+		switch (v.getId()) {
+
 		case R.id.txtDiameter:
-			
-			equalizeSeekBarWithText(R.id.txtDiameter, R.id.seekBarDiameter);
+
+			synchronizeTextToSeekBar(R.id.txtDiameter, R.id.seekBarDiameter);
 			break;
-			
+
 		}
-			
+
 		return false;
 	}
-	
-	/*TODO Helper? */
-	private void equalizeSeekBarWithText(int textId, int seekBarId) {
-		EditText eText = (EditText) findViewById(textId);
-		SeekBar sBar = (SeekBar)findViewById(seekBarId);
-		
-		if(!eText.getText().toString().equals(""))
-		{
 
-		
-		int sekWidth =  sBar.getProgress();
-		int width = Integer.valueOf(eText.getText().toString());
-					
-		
-		if(sekWidth != width){
-			sBar.setProgress(width);
-		}
-		}
-	}
-	
 }
