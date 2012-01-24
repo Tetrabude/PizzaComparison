@@ -3,6 +3,7 @@ package de.smeky.android.pizzasize.edit;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -58,7 +59,8 @@ public abstract class PizzaEdit extends Activity implements OnClickListener {
 			// piz.setDiameter(Double.valueOf(txtDiameter.getText().toString()));
 
 			intent.putExtra("id", id);
-			intent.putExtra("pizza", newPizza);
+			
+			intent.putExtra("pizza", (Parcelable) newPizza);
 
 			setResult(Activity.RESULT_OK, intent);
 			finish();
