@@ -140,15 +140,11 @@ public abstract class PizzaEdit extends Activity implements OnClickListener, OnK
 			return false;
 		}
 		
-		if (!Helper.checkDoubleIsPositive(txtSellingPriceEuro.getText().toString(),
+		if (!Helper.checkPrice(txtSellingPriceEuro.getText().toString(),txtSellingPriceCent.getText().toString(),
 				R.string.error_price, getApplicationContext())) {
 			return false;
 		}
-		
-		if (!Helper.checkDoubleIsPositive(txtSellingPriceCent.getText().toString(),
-				R.string.error_price, getApplicationContext())) {
-			return false;
-		}
+	
 		return true;
 	}
 
