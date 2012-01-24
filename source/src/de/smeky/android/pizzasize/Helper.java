@@ -53,4 +53,23 @@ public class Helper {
 	static public String getCentString(double value){
 		return doubleToRealNumberString(Math.floor((value - Math.floor(value) ) * 100));
 	}
+
+	public static boolean checkPrice(String euro, String cent, int failureMessage, Context context) {
+		
+		
+		if (euro.length() <= 0 || cent.length() <= 0) {
+
+			Toast.makeText(context, context.getString(failureMessage), Toast.LENGTH_SHORT).show();
+			return false;
+		}
+		
+		if (Double.valueOf(euro)<=0 && Double.valueOf(cent)<=0){
+
+			Toast.makeText(context, context.getString(failureMessage), Toast.LENGTH_SHORT).show();
+			return false;
+		}
+			
+			
+		return true;
+	}
 }

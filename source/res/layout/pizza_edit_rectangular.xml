@@ -58,6 +58,7 @@
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
+        android:max="60"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
 
@@ -88,6 +89,7 @@
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
+        android:max="60"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
 
@@ -149,6 +151,7 @@
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
+        android:max="60"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
     
@@ -161,6 +164,7 @@
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
+        android:max="99"
         android:thumb="@drawable/pizza_button" >
     </SeekBar>
     
