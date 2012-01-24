@@ -30,7 +30,7 @@
         android:layout_height="40dp"
         android:layout_margin="5dp"
         android:layout_alignParentRight="true"
-      android:background="@drawable/plus">
+      android:background="@android:drawable/ic_menu_save">
     </Button>
     
    <TextView
@@ -56,7 +56,8 @@
         android:layout_toRightOf="@+id/txtDiameter"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:scrollbarStyle="insideOverlay" 
                android:progress="0"
         android:secondaryProgress="0"
@@ -108,7 +109,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSellingPriceCent"
-        android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
@@ -121,7 +123,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBarEuro"
-        android:layout_margin="5dp"
+               android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
