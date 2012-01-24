@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import de.smeky.android.pizzasize.Helper;
 import de.smeky.android.pizzasize.R;
@@ -16,9 +17,9 @@ import de.smeky.android.pizzasize.pizza.PizzaRound;
 public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeListener, OnKeyListener {
 	
 	private EditText txtWidth;
-	private EditText txtHeight;
-	private SeekBar widthSeekBar;
-	private SeekBar heightSeekBar;
+	private EditText txtLength;
+	private SeekBar sbWidth;
+	private SeekBar sbLength;
  
 	
     @Override
@@ -27,26 +28,26 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
     	super.onCreate(savedInstanceState);
         
         txtWidth = (EditText) findViewById(R.id.txtWidth);
-        txtHeight = (EditText) findViewById(R.id.txtHeight);
+        txtLength = (EditText) findViewById(R.id.txtLength);
 
         PizzaRectangular temp = (PizzaRectangular) pizza;
         
         txtWidth.setText(""+temp.getWidth());
-        txtHeight.setText(""+temp.getLength());
+        txtLength.setText(""+temp.getLength());
         
-        txtHeight.setText(Helper.doubleToRealNumberString(temp.getLength()));
-        txtHeight.setOnKeyListener(this);
+        txtLength.setText(Helper.doubleToRealNumberString(temp.getLength()));
+        txtLength.setOnKeyListener(this);
         txtWidth.setText(Helper.doubleToRealNumberString(temp.getWidth()));
         txtWidth.setOnKeyListener(this);
         
-        widthSeekBar = (SeekBar)findViewById(R.id.seekBarWidth);
-        widthSeekBar.setOnSeekBarChangeListener(this);
+        sbWidth = (SeekBar)findViewById(R.id.seekBarWidth);
+        sbWidth.setOnSeekBarChangeListener(this);
         
-        heightSeekBar = (SeekBar)findViewById(R.id.seekBarHeight);
-        heightSeekBar.setOnSeekBarChangeListener(this);
+        sbLength = (SeekBar)findViewById(R.id.seekBarLength);
+        sbLength.setOnSeekBarChangeListener(this);
         
-        equalizeSeekBarWithText(R.id.txtWidth, R.id.seekBarWidth);
-        equalizeSeekBarWithText(R.id.txtHeight, R.id.seekBarHeight);
+        synchronizeTextToSeekBar(R.id.txtWidth, R.id.seekBarWidth);
+        synchronizeTextToSeekBar(R.id.txtLength, R.id.seekBarLength);
       
       
     }
@@ -56,12 +57,12 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
     @Override
 	public void onClick(View v) {
 		
-		if(v.equals(btnSave)){
+		if(v.equals(btnSave) && checkValues() ){
 			newPizza = new PizzaRectangular();
 
 			((PizzaRectangular) newPizza).setWidth(Double.valueOf(txtWidth.getText().toString()));
 			
-			((PizzaRectangular) newPizza).setLength(Double.valueOf(txtHeight.getText().toString()));
+			((PizzaRectangular) newPizza).setLength(Double.valueOf(txtLength.getText().toString()));
 		}
 
 		super.onClick(v);
@@ -78,11 +79,11 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
 		 
 		 switch(seekBar.getId()){
 		 
-		 case R.id.seekBarHeight:
+		 case R.id.seekBarLength:
 			 String progressStringHeight = progress +"";
 		    	
 		    	if(fromTouch) {
-		        	txtHeight.setText(progressStringHeight);
+		        	txtLength.setText(progressStringHeight);
 		        } 
 		    	break;
 		 case R.id.seekBarWidth:
@@ -112,12 +113,12 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
 			
 			case R.id.txtWidth:
 				
-				equalizeSeekBarWithText(R.id.txtWidth, R.id.seekBarWidth);
+				synchronizeTextToSeekBar(R.id.txtWidth, R.id.seekBarWidth);
 				break;
 			
-			case R.id.txtHeight:
+			case R.id.txtLength:
 				
-			    equalizeSeekBarWithText(R.id.txtHeight, R.id.seekBarHeight);
+			    synchronizeTextToSeekBar(R.id.txtLength, R.id.seekBarLength);
 				break;
 			
 				
@@ -127,23 +128,24 @@ public class PizzaEditRectangular extends PizzaEdit  implements OnSeekBarChangeL
 		}
 
 
-
-		private void equalizeSeekBarWithText(int textId, int seekBarId) {
-			EditText eText = (EditText) findViewById(textId);
-			SeekBar sBar = (SeekBar)findViewById(seekBarId);
+	    @Override
+		protected boolean checkValues() {
+				
+		
+	    	if(!Helper.checkIntegerIsPositive(txtWidth.getText().toString(), R.string.error_width, getApplicationContext())){
+	    		return false;
+	    	}
 			
-			if(!eText.getText().toString().equals(""))
-			{
-
+	    	if(!Helper.checkIntegerIsPositive(txtLength.getText().toString(), R.string.error_length, getApplicationContext())){
+	    		return false;
+	    	}
+	    	
 			
-			int sekWidth =  sBar.getProgress();
-			int width = Integer.valueOf(eText.getText().toString());
+	    	if(!super.checkValues()){
+	    		return false;
+	    	}
 						
-			
-			if(sekWidth != width){
-				sBar.setProgress(width);
-			}
-			}
+			return true;
 		}
 
 	

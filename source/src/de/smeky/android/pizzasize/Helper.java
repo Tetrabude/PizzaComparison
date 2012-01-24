@@ -3,22 +3,46 @@ package de.smeky.android.pizzasize;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-public class  Helper {
-	
-	private Helper(){
-		
+import android.content.Context;
+import android.widget.Toast;
+
+public class Helper {
+
+	private Helper() {
+
 	}
 
-	static public String doubleToRealNumberString( double dbl ){
-		NumberFormat number = new DecimalFormat( "0" );
-		
-		return 	number.format( dbl );
+	static public String doubleToRealNumberString(double dbl) {
+		NumberFormat number = new DecimalFormat("0");
+
+		return number.format(dbl);
 	}
-	
-	static public String doubleToCurrencyString( double dbl ){
-		NumberFormat number = new DecimalFormat( "0.00" );
-		
-		return 	number.format( dbl );
+
+	static public String doubleToCurrencyString(double dbl) {
+		NumberFormat number = new DecimalFormat("0.00");
+
+		return number.format(dbl);
 	}
-	
+
+	static public boolean checkIntegerIsPositive(String txt, int failureMessage, Context context) {
+
+		if (txt.length() <= 0 || Integer.valueOf(txt) <= 0) {
+
+			Toast.makeText(context, context.getString(failureMessage), Toast.LENGTH_SHORT).show();
+			return false;
+		}
+
+		return true;
+	}
+
+	static public boolean checkDoubleIsPositive(String txt, int failureMessage, Context context) {
+
+		if (txt.length() <= 0 || Double.valueOf(txt) <= 0) {
+
+			Toast.makeText(context, context.getString(failureMessage), Toast.LENGTH_SHORT).show();
+			return false;
+		}
+
+		return true;
+	}
 }
