@@ -1,4 +1,4 @@
-package de.smeky.android.pizzasize;
+package de.tetrabude.android.pizzacomparison;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

@@ -1,4 +1,4 @@
-package de.smeky.android.pizzasize.pizza;
+package de.tetrabude.android.pizzacomparison.pizza;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
-package de.smeky.android.pizzasize.pizza;
+package de.tetrabude.android.pizzacomparison.pizza;
 
-import de.smeky.android.pizzasize.Helper;
+import de.tetrabude.android.pizzacomparison.Helper;
 import android.os.Parcel;
 import android.os.Parcelable;
 
