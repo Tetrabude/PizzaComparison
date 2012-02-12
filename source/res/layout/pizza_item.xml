@@ -28,7 +28,7 @@
 		    android:id="@+id/textViewName"  
 			android:layout_alignParentLeft="true"
 			android:layout_height="wrap_content"
-			android:text="Pizza1"
+			android:text="@string/pizza"
 			android:layout_width="wrap_content" android:textSize="20sp" 
 			android:textColor="@color/pizza_item_text"></TextView>
 		
@@ -36,7 +36,9 @@
 		    android:id="@+id/textA"
 		    android:layout_toRightOf="@+id/textViewName"
 			android:layout_height="wrap_content"
-			android:text=" á "
+			android:text="@string/per"
+			android:paddingLeft="5sp"
+      android:paddingRight="5sp"
 			android:layout_width="wrap_content" android:textSize="20sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 		
@@ -44,7 +46,7 @@
 		    android:id="@+id/textViewSellingPrice"
 		    android:layout_toRightOf="@+id/textA"
 			android:layout_height="wrap_content"
-			android:text="5"
+			android:text="@string/selling_price"
 			android:layout_width="wrap_content" android:textSize="20sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 
@@ -52,7 +54,7 @@
 		    android:id="@+id/textViewSellingPriceUnit"
 		    android:layout_toRightOf="@+id/textViewSellingPrice"
 			android:layout_height="wrap_content"
-			android:text=" €"
+			android:text="@string/currency"
 			android:layout_width="wrap_content" android:textSize="20sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 
@@ -60,7 +62,6 @@
 		    android:id="@+id/textViewDimension"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
-			android:text="5x6"
 			android:layout_width="wrap_content" android:textSize="15sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 		
@@ -70,7 +71,9 @@
 		    android:layout_toRightOf="@+id/textViewDimension"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
-			android:text=" = "
+			android:text="@string/equals"
+			android:paddingLeft="5sp"
+			android:paddingRight="5sp"
 			android:layout_width="wrap_content" android:textSize="15sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 			
@@ -79,7 +82,6 @@
 		    android:layout_toRightOf="@+id/textViewEquals"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
-			android:text="30"
 			android:textColor="@color/pizza_item_text"
 			android:layout_width="wrap_content" android:textSize="15sp"></TextView>
 		
@@ -88,7 +90,7 @@
 		    android:layout_toRightOf="@+id/textViewSquareSize"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
-			android:text=" cm²"
+			android:text="@string/square_unit"
 			android:layout_width="wrap_content" android:textSize="15sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 
@@ -104,7 +106,6 @@
 			<TextView
 			    android:id="@+id/textViewSquarePrice"
 				android:layout_height="wrap_content"
-				android:text="0.5"
 				android:layout_width="wrap_content"
 				android:layout_alignParentTop="true"
 				android:layout_centerInParent="true"
@@ -114,7 +115,7 @@
 			<TextView
 			    android:id="@+id/textViewSquarePriceUnit"
 				android:layout_height="wrap_content"
-				android:text=" €/m²"
+				android:text="@string/currency_per_square_unit"
 				android:layout_width="wrap_content"
 				android:layout_alignParentBottom="true"
 				android:layout_centerInParent="true"

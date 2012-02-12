@@ -17,7 +17,7 @@ public abstract class Pizza implements Parcelable, Serializable, Comparable<Pizz
 	
 	public Pizza(){
 		pizzaName = "Pizza";
-		sellingPrice = 4.20;
+		sellingPrice = 13.37;
 	}
 	
 	public double getPrize() {

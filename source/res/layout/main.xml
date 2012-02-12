@@ -12,7 +12,8 @@
 		android:layout_alignParentTop="true"
 		android:layout_above="@+id/imageViewAddRound"></ListView>
 	<ImageView
-		android:layout_width="wrap_content"
+	  android:contentDescription="@string/description_add_rectangular_pizza"
+	  android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:src="@drawable/pizza_eckig"
 		android:id="@+id/imageViewAddRectangular"
@@ -21,6 +22,7 @@
 		android:clickable="true">
 	</ImageView>
 	<ImageView
+	    android:contentDescription="@string/description_add_round_pizza"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:src="@drawable/pizza_rund"
