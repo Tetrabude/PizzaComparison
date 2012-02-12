@@ -59,12 +59,12 @@
         android:layout_below="@+id/textViewWidth"
         android:layout_toRightOf="@+id/txtWidth"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingRight="20dp"
         android:max="60"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:thumb="@drawable/pizza_button" >
+        android:thumb="@drawable/pizza_eckig" >
     </SeekBar>
 
     <TextView
@@ -92,12 +92,12 @@
         android:layout_below="@+id/textViewLength"
         android:layout_toRightOf="@+id/txtLength"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingRight="20dp"
         android:max="60"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:thumb="@drawable/pizza_button" >
+        android:thumb="@drawable/pizza_eckig" >
     </SeekBar>
 
     <TextView
@@ -158,8 +158,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSellingPriceCent"
         android:max="30"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
@@ -172,8 +172,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBarEuro"
         android:max="99"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
