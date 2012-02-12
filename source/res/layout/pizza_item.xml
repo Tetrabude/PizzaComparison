@@ -4,8 +4,9 @@
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:background="#800000" >
+	android:background="@color/background" >
 	<ImageView
+	  android:contentDescription="@string/description_pizza_item"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:src="@drawable/pizza_rund"

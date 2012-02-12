@@ -22,7 +22,7 @@
    <string name="description_add_rectangular_pizza">Add rectangular pizza.</string>
    
    <string name="description_add_round_pizza">Add round pizza.</string>
-   
+   <string name="description_pizza_item">Edit pizza.</string>
    
     <!-- Error Messages -->
     <string name="error_diameter">Wrong diameter</string>

@@ -1,12 +1,8 @@
 package de.tetrabude.android.pizzacomparison.pizza;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
-import de.tetrabude.android.pizzacomparison.Helper;
-
 import android.os.Parcel;
 import android.os.Parcelable;
+import de.tetrabude.android.pizzacomparison.Helper;
 
 public class PizzaRectangular extends Pizza {
 
