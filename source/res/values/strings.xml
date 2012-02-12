@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Pizza Properties -->
-    <string name="app_name">Pizza Price Comparison</string>
+    <string name="app_name">Pizza Comparison</string>
     <string name="currency">€</string>
     <string name="separator">,</string>
     <string name="selling_price">{0} {1}</string>
