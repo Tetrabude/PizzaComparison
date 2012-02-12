@@ -1,20 +1,16 @@
-package de.smeky.android.pizzasize.edit;
+package de.tetrabude.android.pizzacomparison.edit;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
-import android.widget.Toast;
-import de.smeky.android.pizzasize.Helper;
-import de.smeky.android.pizzasize.R;
-import de.smeky.android.pizzasize.pizza.Pizza;
-import de.smeky.android.pizzasize.pizza.PizzaRound;
+import de.tetrabude.android.pizzacomparison.Helper;
+import de.tetrabude.android.pizzacomparison.R;
+import de.tetrabude.android.pizzacomparison.pizza.Pizza;
+import de.tetrabude.android.pizzacomparison.pizza.PizzaRound;
 
 public class PizzaEditRound extends PizzaEdit implements
 		OnSeekBarChangeListener, OnKeyListener {

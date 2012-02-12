@@ -1,4 +1,4 @@
-package de.smeky.android.pizzasize;
+package de.tetrabude.android.pizzacomparison;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -6,18 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.ObjectOutputStream.PutField;
 import java.io.StreamCorruptedException;
 import java.util.ArrayList;
-import java.util.List;
 
-import de.smeky.android.pizzasize.edit.PizzaEditRectangular;
-import de.smeky.android.pizzasize.edit.PizzaEditRound;
-import de.smeky.android.pizzasize.pizza.Pizza;
-import de.smeky.android.pizzasize.pizza.PizzaRectangular;
-import de.smeky.android.pizzasize.pizza.PizzaRound;
-
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -25,20 +16,21 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
-import android.view.View.OnLongClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
+import de.tetrabude.android.pizzacomparison.edit.PizzaEditRectangular;
+import de.tetrabude.android.pizzacomparison.edit.PizzaEditRound;
+import de.tetrabude.android.pizzacomparison.pizza.Pizza;
+import de.tetrabude.android.pizzacomparison.pizza.PizzaRectangular;
+import de.tetrabude.android.pizzacomparison.pizza.PizzaRound;
 
 public class MainActivity extends ListActivity implements OnItemClickListener, OnClickListener, OnCreateContextMenuListener {
 	/** Called when the activity is first created. */

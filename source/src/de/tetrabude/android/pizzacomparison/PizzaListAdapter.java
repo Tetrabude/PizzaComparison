@@ -1,10 +1,6 @@
-package de.smeky.android.pizzasize;
+package de.tetrabude.android.pizzacomparison;
 
 import java.util.List;
-
-import de.smeky.android.pizzasize.pizza.Pizza;
-import de.smeky.android.pizzasize.pizza.PizzaRectangular;
-import de.smeky.android.pizzasize.pizza.PizzaRound;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import de.tetrabude.android.pizzacomparison.pizza.Pizza;
+import de.tetrabude.android.pizzacomparison.pizza.PizzaRectangular;
+import de.tetrabude.android.pizzacomparison.pizza.PizzaRound;
 
 public class PizzaListAdapter extends BaseAdapter {
 	

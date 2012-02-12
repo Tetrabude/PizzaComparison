@@ -1,4 +1,4 @@
-package de.smeky.android.pizzasize.edit;
+package de.tetrabude.android.pizzacomparison.edit;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,9 +14,9 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Toast;
-import de.smeky.android.pizzasize.Helper;
-import de.smeky.android.pizzasize.R;
-import de.smeky.android.pizzasize.pizza.Pizza;
+import de.tetrabude.android.pizzacomparison.Helper;
+import de.tetrabude.android.pizzacomparison.R;
+import de.tetrabude.android.pizzacomparison.pizza.Pizza;
 
 public abstract class PizzaEdit extends Activity implements OnClickListener, OnKeyListener, OnSeekBarChangeListener {
 
