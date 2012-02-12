@@ -265,10 +265,6 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 	protected void onStop() {
 		super.onStop();
 		
-		String test = "test";
-		
-		
-		
 		
 		try {
 			FileOutputStream fos;
