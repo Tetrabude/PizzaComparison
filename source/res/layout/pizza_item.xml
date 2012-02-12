@@ -55,6 +55,7 @@
 		    android:layout_toRightOf="@+id/textViewSellingPrice"
 			android:layout_height="wrap_content"
 			android:text="@string/currency"
+			android:layout_marginLeft="5sp"
 			android:layout_width="wrap_content" android:textSize="20sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 
@@ -91,6 +92,8 @@
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:text="@string/square_unit"
+			android:paddingLeft="5sp"
+      android:paddingRight="5sp"
 			android:layout_width="wrap_content" android:textSize="15sp"
 			android:textColor="@color/pizza_item_text"></TextView>
 
