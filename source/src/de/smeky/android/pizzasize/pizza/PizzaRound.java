@@ -11,7 +11,7 @@ public class PizzaRound extends Pizza {
 	double diameter = 0;
 
 	public PizzaRound() {
-		diameter = 24;
+		diameter = 23;
 	}
 
 	public double getDiameter() {
