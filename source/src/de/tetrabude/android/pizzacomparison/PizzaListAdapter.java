@@ -47,6 +47,13 @@ public class PizzaListAdapter extends BaseAdapter {
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
+//		
+//		if(pizzaData.size() == 0) {
+//			
+//			convertView = mInflator.inflate(R.layout.start_view, parent,false);
+//			return convertView;
+//			
+//		}
 
 
 		if(convertView==null){

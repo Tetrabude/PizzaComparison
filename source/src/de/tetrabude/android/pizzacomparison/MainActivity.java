@@ -26,6 +26,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
+import android.widget.TextView;
 import de.tetrabude.android.pizzacomparison.edit.PizzaEditRectangular;
 import de.tetrabude.android.pizzacomparison.edit.PizzaEditRound;
 import de.tetrabude.android.pizzacomparison.pizza.Pizza;
@@ -38,11 +39,14 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 	private static final String FILENAME = "pizzalist";
 	
 	private ArrayList<Pizza> pizzaList;
+	private ArrayList<Pizza> pizzaDemoList;
 	private PizzaListAdapter pizzaAdapter;
 	private static final int PIZZA_REQUEST = 1;
 	
 	private ImageView addRound;
 	private ImageView addRectangular;
+	private TextView infoTextTop;
+	private TextView infoTextBottom;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,8 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		
+		
 		
 		// Kontextmenü
 		registerForContextMenu(getListView());
@@ -62,7 +68,10 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		
 		addRectangular = (ImageView) findViewById(R.id.imageViewAddRectangular);
 		addRectangular.setOnClickListener(this);
-
+		
+		infoTextTop = (TextView) findViewById(R.id.info_text_top);
+		infoTextBottom = (TextView) findViewById(R.id.info_text_bottom);
+		
 		getListView().setOnItemClickListener(this);
 
 		
@@ -72,13 +81,29 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 			pizzaList = loadPizzaListFromFile();
 		}
 		
+		
+		
 		pizzaAdapter = new PizzaListAdapter(this, pizzaList);
 
 		setListAdapter(pizzaAdapter);
 
+		listChanged();
+
+	}
+
+
+	private void listChanged() {
 		java.util.Collections.sort(pizzaList);
 		pizzaAdapter.notifyDataSetChanged();
+		
+		if(pizzaList.size() == 0) {
+			infoTextBottom.setVisibility(TextView.VISIBLE);
+			infoTextTop.setVisibility(TextView.VISIBLE);
+		} else {
 
+			infoTextBottom.setVisibility(TextView.INVISIBLE);
+			infoTextTop.setVisibility(TextView.INVISIBLE);
+		}
 	}
 	
 
@@ -110,7 +135,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 			e.printStackTrace();
 		} 
 		
-		return createTestPizzaList();		
+		return new ArrayList<Pizza>(10);
 		
 	}
 	
@@ -157,6 +182,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		return list;
 	}
 
+		
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		Pizza intentPizza = pizzaList.get(position);
@@ -210,7 +236,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 				
 				//java.util.ArrayList<Pizza>.so >> Arrays.sort( pizzaList );
 				
-				pizzaAdapter.notifyDataSetChanged();
+				listChanged();
 			}
 		}
 	}
@@ -248,7 +274,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 	  switch (item.getItemId()) {
 	  case R.id.delete:
 		  pizzaList.remove((int)info.id);
-		  pizzaAdapter.notifyDataSetChanged();
+		  listChanged();
 	    return true;
 	  default:
 	    return super.onContextItemSelected(item);
