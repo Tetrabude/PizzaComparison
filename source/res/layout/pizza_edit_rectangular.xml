@@ -11,8 +11,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="#800000" 
+    
     >
-
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="fill_parent"
@@ -59,7 +59,8 @@
         android:progress="0"
         android:scrollbarStyle="insideOverlay"
         android:secondaryProgress="0"
-        android:thumb="@drawable/pizza_eckig" >
+        android:thumb="@drawable/pizza_eckig" 
+        >
     </SeekBar>
 
     <TextView

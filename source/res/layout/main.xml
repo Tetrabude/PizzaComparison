@@ -34,7 +34,7 @@
         android:layout_below="@+android:id/list"
         android:clickable="true"
         android:contentDescription="@string/description_add_rectangular_pizza"
-        android:src="@drawable/pizza_eckig" >
+        android:src="@drawable/pizza_eckig_add" >
     </ImageView>
 
     <RelativeLayout
@@ -61,7 +61,7 @@
         android:layout_alignParentBottom="true"
         android:clickable="true"
         android:contentDescription="@string/description_add_round_pizza"
-        android:src="@drawable/pizza_rund" >
+        android:src="@drawable/pizza_rund_add" >
     </ImageView>
 
 </RelativeLayout>
