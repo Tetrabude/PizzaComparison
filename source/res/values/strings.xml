@@ -17,6 +17,11 @@
    <string name="square_unit"> cm²</string>
    <string name="currency_per_square_unit"> €/m²</string>
    <string name="save">Save</string>
+   <string name="add_pizza">&#8592; add pizza &#8594;</string>
+   <string name="compare_pizza"> Hey, your list for comparing pizza is empty.\n \n
+           Add some pizza of one kind, we sort it for you by euros per square meter.\n
+           The cheapest is on top. </string>    
+  
    
    <!-- Descriptions -->
    <string name="description_add_rectangular_pizza">Add rectangular pizza.</string>

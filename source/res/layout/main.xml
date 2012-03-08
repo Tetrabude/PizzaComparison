@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-	android:id="@+id/relativeLayout1"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:background="@color/redbackground"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	>
-	<ListView
-		android:id="@+android:id/list"
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:layout_alignParentTop="true"
-		android:layout_above="@+id/imageViewAddRound"></ListView>
-	<ImageView
-	  android:contentDescription="@string/description_add_rectangular_pizza"
-	  android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:src="@drawable/pizza_eckig"
-		android:id="@+id/imageViewAddRectangular"
-		android:layout_below="@+android:id/list"
-		android:layout_alignRight="@+android:id/list"
-		android:clickable="true">
-	</ImageView>
-	<ImageView
-	    android:contentDescription="@string/description_add_round_pizza"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:src="@drawable/pizza_rund"
-		android:id="@+id/imageViewAddRound"
-		android:layout_below="@+id/imageViewAddRound"
-		android:layout_alignLeft="@+id/imageViewAddRound"
-		android:layout_alignParentBottom="true"
-		android:clickable="true"></ImageView>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/redbackground" >
+
+        <TextView
+            android:id="@+id/info_text_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/imageViewAddRectangular"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/compare_pizza" 
+            android:textSize="20sp"
+            android:layout_margin="10dp">
+        </TextView>
+
+
+    <ListView
+        android:id="@+android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/imageViewAddRound">
+    </ListView>
+
+    <ImageView
+        android:id="@+id/imageViewAddRectangular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+android:id/list"
+        android:layout_below="@+android:id/list"
+        android:clickable="true"
+        android:contentDescription="@string/description_add_rectangular_pizza"
+        android:src="@drawable/pizza_eckig" >
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/info_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+android:id/list" >
+
+        <TextView
+            android:id="@+id/info_text_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/add_pizza"
+            android:textSize="20sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageViewAddRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:contentDescription="@string/description_add_round_pizza"
+        android:src="@drawable/pizza_rund" >
+    </ImageView>
+
 </RelativeLayout>
-    
