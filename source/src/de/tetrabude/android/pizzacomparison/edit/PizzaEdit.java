@@ -151,8 +151,11 @@ public abstract class PizzaEdit extends Activity implements OnClickListener, OnK
 	protected void synchronizeTextToSeekBar(int textId, int seekBarId) {
 		EditText eText = (EditText) findViewById(textId);
 		SeekBar sBar = (SeekBar) findViewById(seekBarId);
-
-		if (!eText.getText().toString().equals("")) {
+		
+		boolean validTextValue = textIsNotEmpty(eText);
+		
+		
+		if (validTextValue) {
 
 			int sekWidth = sBar.getProgress();
 			int width = Integer.valueOf(eText.getText().toString());
@@ -161,6 +164,10 @@ public abstract class PizzaEdit extends Activity implements OnClickListener, OnK
 				sBar.setProgress(width);
 			}
 		}
+	}
+
+	private boolean textIsNotEmpty(EditText eText) {
+		return !eText.getText().toString().equals("");
 	}
 	
 	protected void synchronizeSeekBarToText(int textId, int seekBarId)

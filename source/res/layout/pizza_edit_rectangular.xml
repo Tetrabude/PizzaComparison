@@ -6,7 +6,7 @@
     android:layout_height="fill_parent" 
     android:background="@color/redbackground">
     
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout 
     android:id="@+id/relativeLayout1"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewWidth"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         android:selectAllOnFocus="true" >
     </EditText>
 
@@ -76,8 +76,9 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewLength"
-        android:inputType="numberDecimal"
-        android:selectAllOnFocus="true">
+        android:inputType="number"
+        android:selectAllOnFocus="true" >
+
     </EditText>
 
     <SeekBar
