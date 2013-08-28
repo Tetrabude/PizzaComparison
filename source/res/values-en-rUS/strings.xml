@@ -10,5 +10,6 @@
    	
    	<!-- Pizza factor for square unit -->
 	<integer name="factor_to_square_currency">100</integer>
+	<integer name="factor_to_square_unit">1</integer>
   
 </resources>
