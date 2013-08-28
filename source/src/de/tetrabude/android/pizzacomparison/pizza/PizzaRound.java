@@ -24,7 +24,7 @@ public class PizzaRound extends Pizza {
 
 	@Override
 	public double getSquareSize() {
-		return Math.round(Math.PI * (diameter / 2) * (diameter / 2) * 100.) / 100.;
+		return Math.PI * (diameter / 2) * (diameter / 2);
 	}
 
 	@Override
