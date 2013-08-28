@@ -65,7 +65,7 @@ public class PizzaListAdapter extends BaseAdapter {
 			holder.pizzaSquarePrice = (TextView) convertView.findViewById(R.id.textViewSquarePrice);
 			holder.pizzaSquareSize = (TextView) convertView.findViewById(R.id.textViewSquareSize);
 			holder.pizzaDimension = (TextView) convertView.findViewById(R.id.textViewDimension);
-			holder.pizzaImage = (ImageView) convertView.findViewById(R.id.imageView1);
+			holder.pizzaImage = (ImageView) convertView.findViewById(R.id.imagePizza);
 			convertView.setTag(holder);
 		}else{
 			holder = (ViewHolder) convertView.getTag();
