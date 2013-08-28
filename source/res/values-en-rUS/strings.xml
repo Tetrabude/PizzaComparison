@@ -5,7 +5,7 @@
     <!-- Pizza Properties -->
     <string name="currency">$</string>
     <string name="separator">.</string>
-   <string name="square_unit"> in²</string>
-   <string name="currency_per_square_unit"> $/in²</string>
+   	<string name="square_unit"> in²</string>
+   	<string name="currency_per_square_unit"> $/in²</string>
   
 </resources>

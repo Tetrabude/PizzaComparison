@@ -22,7 +22,7 @@ public class PizzaRectangular extends Pizza {
 
 	@Override
 	public double getSquareSize() {
-		return Math.round(length*width*100.)/100.;
+		return Math.round(length*width*100.) / 100.;
 	}
 	
 	@Override
