@@ -44,11 +44,12 @@
 
     <EditText
         android:id="@+id/txtDiameter"
-        android:layout_below="@+id/txtLabelDiameter"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:selectAllOnFocus="true">
+        android:layout_below="@+id/txtLabelDiameter"
+        android:inputType="number"
+        android:selectAllOnFocus="true" >
+
     </EditText>
     
     <SeekBar
