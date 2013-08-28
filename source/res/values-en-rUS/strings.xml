@@ -5,10 +5,10 @@
     <!-- Pizza Properties -->
     <string name="currency">$</string>
     <string name="separator">.</string>
-   	<string name="square_unit"> in²</string>
-   	<string name="currency_per_square_unit"> $/ft²</string>
+   	<string name="square_unit"> sq. inch</string>
+   	<string name="currency_per_square_unit"> cents/sq inch</string>
    	
    	<!-- Pizza factor for square unit -->
-	<integer name="factor_to_square_unit">144</integer>
+	<integer name="factor_to_square_currency">100</integer>
   
 </resources>
