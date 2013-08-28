@@ -11,7 +11,6 @@
 	android:id="@+id/relativeLayout1"
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
-	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:background="#800000">
 
     <TextView
@@ -48,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtLabelDiameter"
         android:inputType="number"
+        android:maxLength="@integer/max_text_length_for_pizza_size"
         android:selectAllOnFocus="true" >
 
     </EditText>
@@ -77,14 +77,15 @@
 
     <EditText
         android:id="@+id/txtSellingPriceEuro"
-         android:layout_below="@+id/txtLabelSellingPrice"
-         android:layout_toLeftOf="@+id/txtLabelSellingPriceDot"
         android:layout_width="75dp"
-        android:gravity="right|center"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLabelSellingPrice"
+        android:layout_toLeftOf="@+id/txtLabelSellingPriceDot"
+        android:gravity="right|center"
         android:inputType="number"
-        android:selectAllOnFocus="true"
-  >
+        android:maxLength="@integer/max_text_length_for_pizza_size"
+        android:selectAllOnFocus="true" >
+
     </EditText>
     
           <TextView
@@ -99,14 +100,15 @@
     </TextView>
     
         <EditText
-        android:id="@+id/txtSellingPriceCent"
-         android:layout_below="@+id/txtLabelSellingPrice"
-         android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
->
+            android:id="@+id/txtSellingPriceCent"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtLabelSellingPrice"
+            android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
+            android:inputType="number"
+            android:maxLength="@integer/max_text_length_cent"
+            android:selectAllOnFocus="true" >
+
     </EditText>
     
      <TextView
