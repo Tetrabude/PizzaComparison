@@ -23,8 +23,7 @@
            Die Günstigste erscheint oben.
             </string>    
     
-	<!-- Pizza factor for square unit -->
-	<integer name="factor_to_square_currency">1</integer>
+
 
     <!-- Descriptions -->
     <string name="description_add_rectangular_pizza">Rechteckige Pizza hinzufügen.</string>
