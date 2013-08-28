@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="50dp"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"
+    android:background="@color/redbackground" >
 
     <ImageView
         android:id="@+id/imagePizza"
@@ -23,7 +24,8 @@
             android:id="@+id/linearLayoutNameTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginLeft="5dp">
 
             <LinearLayout
                 android:id="@+id/linearLayoutNameTopLeft"
@@ -133,13 +135,14 @@
         android:id="@+id/relativeLayoutSquarePrice"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:orientation="vertical" 
-        android:layout_marginLeft="10sp">
+        android:layout_marginLeft="10sp"
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/textViewSquarePrice"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:textColor="@color/pizza_item_text"
             android:textSize="20sp" >
         </TextView>
@@ -148,11 +151,10 @@
             android:id="@+id/textViewSquarePriceUnit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/currency_per_square_unit"
             android:gravity="center"
+            android:text="@string/currency_per_square_unit"
             android:textColor="@color/pizza_item_text"
             android:textSize="15sp" >
-
         </TextView>
     </LinearLayout>
 
