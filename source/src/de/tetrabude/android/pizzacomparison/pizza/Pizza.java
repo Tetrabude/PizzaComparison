@@ -34,8 +34,8 @@ public abstract class Pizza implements Parcelable, Serializable, Comparable<Pizz
 	
 	public abstract String getDimension();
 	
-	public double getSquarePrice(int factor_to_square_unit){
-		return Math.round(sellingPrice/(this.getSquareSize()/factor_to_square_unit)*100.)/100.;
+	public double getSquarePrice(double factor_to_square_unit){
+		return sellingPrice/(this.getSquareSize()/factor_to_square_unit);
 		
 	}
 	
