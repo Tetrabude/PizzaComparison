@@ -2,6 +2,8 @@ package de.tetrabude.android.pizzacomparison.pizza;
 
 import java.io.Serializable;
 
+import de.tetrabude.android.pizzacomparison.R;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
@@ -32,10 +34,17 @@ public abstract class Pizza implements Parcelable, Serializable, Comparable<Pizz
 	
 	public abstract String getDimension();
 	
-	public double getSquarePirce(){
-		return Math.round(sellingPrice/(this.getSquareSize()*0.0001)*100.)/100.;
+	public double getSquarePrice(int factor_to_square_unit){
+		return Math.round(sellingPrice/(this.getSquareSize()/factor_to_square_unit)*100.)/100.;
 		
 	}
+	
+	public double getSquarePrice(){
+		return getSquarePrice(1);
+		
+	}
+	
+	
 
 	public void setPizzaName(String pizzaName) {
 		this.pizzaName = pizzaName;
@@ -70,9 +79,9 @@ public abstract class Pizza implements Parcelable, Serializable, Comparable<Pizz
     // Wenn "this = argument" dann muss die Methode 0 (irgendetwas = 0) zur�ckgeben
     // Wenn "this > argument" dann muss die Methode irgendetwas > 0 zur�ckgeben        
     public int compareTo( Pizza argument ) {
-        if( getSquarePirce() < argument.getSquarePirce() )
+        if( getSquarePrice() < argument.getSquarePrice() )
             return -1;
-        if( getSquarePirce() > argument.getSquarePirce() )
+        if( getSquarePrice() > argument.getSquarePrice() )
             return 1;
         
         return 0;

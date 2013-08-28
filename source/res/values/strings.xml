@@ -11,24 +11,22 @@
     <string name="price">Price</string>
     <string name="width">Width</string>
     <string name="length">Length</string>
-    <string name="pizza">Pizza</string>  
+    <string name="pizza">Pizza</string>
     <string name="per">for</string>
-   <string name="equals">=</string>
-   <string name="square_unit"> cm²</string>
-   <string name="currency_per_square_unit"> €/m²</string>
-   <string name="save">Save</string>
-   <string name="add_pizza">&#8592; add pizza &#8594;</string>
-   <string name="compare_pizza"> Hey, your list for comparing pizza is empty.\n \n
+    <string name="equals">=</string>
+    <string name="square_unit"> cm²</string>
+    <string name="currency_per_square_unit"> €/m²</string>
+    <string name="save">Save</string>
+    <string name="add_pizza">&#8592; add pizza &#8594;</string>
+    <string name="compare_pizza"> Hey, your list for comparing pizza is empty.\n \n
            Add some pizza of one kind. Then they will be sorted by euros per square meter.\n
-           The cheapest is on top. </string>    
-  
-   
-   <!-- Descriptions -->
-   <string name="description_add_rectangular_pizza">Add rectangular pizza.</string>
-   
-   <string name="description_add_round_pizza">Add round pizza.</string>
-   <string name="description_pizza_item">Edit pizza.</string>
-   
+           The cheapest is on top. </string>
+
+    <!-- Descriptions -->
+    <string name="description_add_rectangular_pizza">Add rectangular pizza.</string>
+    <string name="description_add_round_pizza">Add round pizza.</string>
+    <string name="description_pizza_item">Edit pizza.</string>
+
     <!-- Error Messages -->
     <string name="error_diameter">Wrong diameter</string>
     <string name="error_width">Wrong width</string>
@@ -36,7 +34,7 @@
     <string name="error_name">Wrong pizza name</string>
     <string name="error_price">Wrong price</string>
     <!-- <string name="rot">#800000</string> -->
-       
+
     <string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help him fix the issue !</string>
     <string name="crash_notif_ticker_text">Unexpected error, please send a report&#8230;</string>
     <string name="crash_notif_title">Pizza Price Comparison has crashed&#8230;</string>
@@ -48,5 +46,6 @@
     <string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
     <string name="crash_dialog_ok_toast">Thank you !</string>
 
-     <color name="redbackground">#800000</color>
+    <color name="redbackground">#800000</color>
+
 </resources>
