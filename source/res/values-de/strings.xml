@@ -5,7 +5,7 @@
     <string name="app_name">Pizzavergleich</string>
     <string name="currency">€</string>
     <string name="separator">,</string>
-    <string name="selling_price">{0} {1}</string>
+   
     <string name="name">Name</string>
     <string name="diameter">Durchmesser</string>
     <string name="price">Preis</string>

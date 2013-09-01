@@ -5,7 +5,7 @@
     <string name="app_name">Pizza Comparison</string>
     <string name="currency">€</string>
     <string name="separator">,</string>
-    <string name="selling_price">{0} {1}</string>
+    <string name="selling_price">%1$s €</string>
     <string name="name">Name</string>
     <string name="diameter">Diameter</string>
     <string name="price">Price</string>
@@ -51,5 +51,6 @@
     <string name="crash_dialog_ok_toast">Thank you !</string>
 
     <color name="redbackground">#e55d6e</color>
+    <color name="pizza_item_text_color">#FFFFFF</color>
 
 </resources>

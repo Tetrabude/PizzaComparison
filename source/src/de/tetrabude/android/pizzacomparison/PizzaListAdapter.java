@@ -78,7 +78,7 @@ public class PizzaListAdapter extends BaseAdapter {
 		
 		
 		holder.pizzaName.setText(tmpPiz.getPizzaName());
-		holder.pizzaSellingPrice.setText("" + Helper.doubleToCurrencyString(tmpPiz.getPrize()));
+		holder.pizzaSellingPrice.setText(parent.getResources().getString(R.string.selling_price, Helper.doubleToCurrencyString(tmpPiz.getPrize())));
 		holder.pizzaSquarePrice.setText("" + Helper.doubleToCurrencyString(tmpPiz.getSquarePrice(factor_currency, factor_unit)));
 		holder.pizzaSquareSize.setText("" + Helper.doubleToRealNumberString(tmpPiz.getSquareSize()));
 		holder.pizzaDimension.setText(tmpPiz.getDimension());

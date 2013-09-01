@@ -5,6 +5,7 @@
     <!-- Pizza Properties -->
     <string name="currency">$</string>
     <string name="separator">.</string>
+     <string name="selling_price">%1$s $</string>
    	<string name="square_unit"> sq. inch</string>
    	<string name="currency_per_square_unit"> cents/sq inch</string>
    	
