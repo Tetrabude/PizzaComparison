@@ -2,4 +2,5 @@
 <resources>
     <dimen name="pizza_item_big_text">25sp</dimen>
     <dimen name="pizza_item_small_text">15sp</dimen>
+    <dimen name="pizza_item_standard_margin">5dp</dimen>
 </resources>

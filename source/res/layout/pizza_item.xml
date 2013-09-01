@@ -1,115 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/gridview"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:alignmentMode="alignMargins"
-    android:background="@color/redbackground"
-    android:columnCount="4"
-    android:orientation="horizontal"
-    android:rowCount="2"
-    android:stretchMode="columnWidth"
-    android:verticalSpacing="10dp" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="65dp"
+    android:background="@color/redbackground" >
 
-    <ImageView
-        android:id="@+id/imagePizza"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_column="0"
-        android:layout_margin="5dp"
-        android:layout_row="0"
-        android:layout_rowSpan="2"
-        android:contentDescription="@string/description_pizza_item"
-        android:scaleType="fitXY"
-        android:src="@drawable/pizza_rund" >
-    </ImageView>
-
-        <TextView
-            android:id="@+id/textViewName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_gravity="top|left"
-            android:layout_marginTop="5dp"
-            android:layout_row="0"
-            android:ellipsize="end"
-            android:lines="1"
-            android:singleLine="true"
-            android:text="@string/pizza"
-            android:textColor="@color/pizza_item_text_color"
-            android:textSize="@dimen/pizza_item_big_text" >
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/textViewSellingPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_gravity="top|right"
-            android:layout_marginTop="5dp"
-            android:layout_row="0"
-            android:paddingLeft="10sp"
-            android:paddingRight="10sp"
-            android:text="@string/selling_price"
-            android:textColor="@color/pizza_item_text_color"
-            android:textSize="@dimen/pizza_item_big_text" >
-
-        </TextView>
-  
-
-    <Space />
-
-    <TextView
-        android:id="@+id/textViewDimension"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="left|bottom"
-        android:layout_marginBottom="5dp"
-        android:layout_row="1"
-        android:text="o 50"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_small_text" />
-
-    <TextView
-        android:id="@+id/textViewSquarePrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="3"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_row="0"
-        android:gravity="center"
-        android:text="82,03"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_big_text" >
-    </TextView>
 
     <!-- Müll: -->
-
-    <TextView
-        android:id="@+id/textViewSquarePriceUnit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="3"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="5dp"
-        android:layout_row="1"
-        android:gravity="center"
-        android:text="@string/currency_per_square_unit"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_small_text" />
 
     <TextView
         android:id="@+id/textViewEquals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="1"
-        android:paddingLeft="5sp"
-        android:paddingRight="5sp"
         android:text="@string/equals"
         android:textColor="@color/pizza_item_text_color"
         android:textSize="@dimen/pizza_item_small_text"
@@ -120,8 +21,6 @@
         android:id="@+id/textViewSquareSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="1"
         android:text="1234"
         android:textColor="@color/pizza_item_text_color"
         android:textSize="@dimen/pizza_item_small_text"
@@ -132,10 +31,6 @@
         android:id="@+id/textViewSquareSizeUnit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="1"
-        android:paddingLeft="5sp"
-        android:paddingRight="5sp"
         android:text="@string/square_unit"
         android:textColor="@color/pizza_item_text_color"
         android:textSize="@dimen/pizza_item_small_text"
@@ -146,10 +41,6 @@
         android:id="@+id/textA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="0"
-        android:paddingLeft="10sp"
-        android:paddingRight="10sp"
         android:text="@string/per"
         android:textColor="@color/pizza_item_text_color"
         android:textSize="@dimen/pizza_item_big_text"
@@ -160,14 +51,84 @@
         android:id="@+id/textViewSellingPriceUnit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
         android:layout_marginLeft="5sp"
-        android:layout_marginTop="5dp"
-        android:layout_row="0"
+        android:layout_marginTop="@dimen/pizza_item_standard_margin"
         android:text="@string/currency"
         android:textColor="@color/pizza_item_text_color"
         android:textSize="@dimen/pizza_item_big_text"
         android:visibility="gone" >
     </TextView>
 
-</GridLayout>
+    <ImageView
+        android:id="@+id/imagePizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/description_pizza_item"
+        android:scaleType="fitXY"
+        android:src="@drawable/pizza_rund" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/pizza_item_standard_margin"
+        android:layout_toLeftOf="@+id/textViewSquarePrice"
+        android:ellipsize="end"
+        android:lines="1"
+        android:singleLine="true"
+        android:text="@string/pizza"
+        android:textColor="@color/pizza_item_text_color"
+        android:textSize="@dimen/pizza_item_big_text" />
+
+    <TextView
+        android:id="@+id/textViewSquarePriceUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewSquarePrice"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textViewSquarePrice"
+        android:layout_margin="@dimen/pizza_item_standard_margin"
+        android:gravity="right"
+        android:text="@string/currency_per_square_unit"
+        android:textColor="@color/pizza_item_text_color"
+        android:textSize="@dimen/pizza_item_small_text" />
+
+    <TextView
+        android:id="@+id/textViewDimension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/pizza_item_standard_margin"
+        android:text="o 50"
+        android:textColor="@color/pizza_item_text_color"
+        android:textSize="@dimen/pizza_item_small_text" />
+
+    <TextView
+        android:id="@+id/textViewSquarePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pizza_item_standard_margin"
+        android:layout_toLeftOf="@+id/imagePizza"
+        android:gravity="right"
+        android:text="182,03"
+        android:textColor="@color/pizza_item_text_color"
+        android:textSize="@dimen/pizza_item_big_text" />
+
+    <TextView
+        android:id="@+id/textViewSellingPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/pizza_item_standard_margin"
+        android:layout_toRightOf="@+id/textViewDimension"
+        android:text="@string/selling_price"
+        android:textColor="@color/pizza_item_text_color"
+        android:textSize="@dimen/pizza_item_small_text" />
+    
+</RelativeLayout>
