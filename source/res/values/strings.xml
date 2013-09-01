@@ -18,6 +18,10 @@
     <string name="currency_per_square_unit"> €/m²</string>
     <string name="save">Save</string>
     <string name="add_pizza">&#8592; add pizza &#8594;</string>
+    <string name="pizza_description_round">&#216; %2$.0f / %1$.2f €</string>
+    <string name="pizza_description_rectangular">%2$.0f x %3$.0f  / %1$.2f €</string>
+    
+    
     <string name="compare_pizza"> Hey, your list for comparing pizza is empty.\n \n
            Add some pizza of one kind. Then they will be sorted by euros per square meter.\n
            The cheapest is on top. </string>

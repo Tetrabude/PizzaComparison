@@ -7,58 +7,6 @@
 
     <!-- Müll: -->
 
-    <TextView
-        android:id="@+id/textViewEquals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/equals"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_small_text"
-        android:visibility="gone" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/textViewSquareSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1234"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_small_text"
-        android:visibility="gone" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/textViewSquareSizeUnit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/square_unit"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_small_text"
-        android:visibility="gone" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/textA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/per"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_big_text"
-        android:visibility="gone" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/textViewSellingPriceUnit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5sp"
-        android:layout_marginTop="@dimen/pizza_item_standard_margin"
-        android:text="@string/currency"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_big_text"
-        android:visibility="gone" >
-    </TextView>
-
     <ImageView
         android:id="@+id/imagePizza"
         android:layout_width="wrap_content"
@@ -99,7 +47,7 @@
         android:textSize="@dimen/pizza_item_small_text" />
 
     <TextView
-        android:id="@+id/textViewDimension"
+        android:id="@+id/textViewPizzaDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -119,16 +67,5 @@
         android:text="182,03"
         android:textColor="@color/pizza_item_text_color"
         android:textSize="@dimen/pizza_item_big_text" />
-
-    <TextView
-        android:id="@+id/textViewSellingPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/pizza_item_standard_margin"
-        android:layout_toRightOf="@+id/textViewDimension"
-        android:text="@string/selling_price"
-        android:textColor="@color/pizza_item_text_color"
-        android:textSize="@dimen/pizza_item_small_text" />
     
 </RelativeLayout>

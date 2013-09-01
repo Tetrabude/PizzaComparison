@@ -20,10 +20,11 @@ public class PizzaListAdapter extends BaseAdapter {
 	
 	static class ViewHolder {
 		TextView pizzaName;
-		TextView pizzaSellingPrice;
-		TextView pizzaSquareSize;
+//		TextView pizzaSellingPrice;
+//		TextView pizzaSquareSize;
 		TextView pizzaSquarePrice;
-		TextView pizzaDimension;
+//		TextView pizzaDimension;
+		TextView pizzaDescription;
 		ImageView pizzaImage;
 		
 	}
@@ -61,10 +62,11 @@ public class PizzaListAdapter extends BaseAdapter {
 			convertView = mInflator.inflate(R.layout.pizza_item, parent,false);
 			holder = new ViewHolder();
 			holder.pizzaName = (TextView) convertView.findViewById(R.id.textViewName);
-			holder.pizzaSellingPrice = (TextView) convertView.findViewById(R.id.textViewSellingPrice);
+//			holder.pizzaSellingPrice = (TextView) convertView.findViewById(R.id.textViewSellingPrice);
 			holder.pizzaSquarePrice = (TextView) convertView.findViewById(R.id.textViewSquarePrice);
-			holder.pizzaSquareSize = (TextView) convertView.findViewById(R.id.textViewSquareSize);
-			holder.pizzaDimension = (TextView) convertView.findViewById(R.id.textViewDimension);
+//			holder.pizzaSquareSize = (TextView) convertView.findViewById(R.id.textViewSquareSize);
+//			holder.pizzaDimension = (TextView) convertView.findViewById(R.id.textViewDimension);
+			holder.pizzaDescription = (TextView) convertView.findViewById(R.id.textViewPizzaDescription);
 			holder.pizzaImage = (ImageView) convertView.findViewById(R.id.imagePizza);
 			convertView.setTag(holder);
 		}else{
@@ -78,15 +80,39 @@ public class PizzaListAdapter extends BaseAdapter {
 		
 		
 		holder.pizzaName.setText(tmpPiz.getPizzaName());
-		holder.pizzaSellingPrice.setText(parent.getResources().getString(R.string.selling_price, Helper.doubleToCurrencyString(tmpPiz.getPrize())));
+//		holder.pizzaSellingPrice.setText(parent.getResources().getString(R.string.selling_price,
+//				Helper.doubleToCurrencyString(tmpPiz.getPrize())));
 		holder.pizzaSquarePrice.setText("" + Helper.doubleToCurrencyString(tmpPiz.getSquarePrice(factor_currency, factor_unit)));
-		holder.pizzaSquareSize.setText("" + Helper.doubleToRealNumberString(tmpPiz.getSquareSize()));
-		holder.pizzaDimension.setText(tmpPiz.getDimension());
+//		holder.pizzaSquareSize.setText("" + Helper.doubleToRealNumberString(tmpPiz.getSquareSize()));
+//		holder.pizzaDimension.setText(tmpPiz.getDimension());
+		
 		
 		if(tmpPiz.getClass() == PizzaRound.class) {
+			
 			holder.pizzaImage.setImageResource(R.drawable.pizza_rund);
+
+			PizzaRound tmpRoundPizza = (PizzaRound) tmpPiz;
+			holder.pizzaDescription.setText(
+					parent.getResources().getString(
+							R.string.pizza_description_round,
+							tmpRoundPizza.getPrize(),
+							tmpRoundPizza.getDiameter()
+					)
+			);
+
 		} else if(tmpPiz.getClass() == PizzaRectangular.class){
 			holder.pizzaImage.setImageResource(R.drawable.pizza_eckig);
+			
+			PizzaRectangular tmpRectangularPizza = (PizzaRectangular) tmpPiz;
+			holder.pizzaDescription.setText(
+					parent.getResources().getString(
+							R.string.pizza_description_rectangular,
+							tmpRectangularPizza.getPrize(),
+							tmpRectangularPizza.getWidth(),
+							tmpRectangularPizza.getLength()
+					)
+			);
+
 		}
 		
 		return convertView;
