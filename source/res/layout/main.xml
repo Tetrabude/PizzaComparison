@@ -11,10 +11,12 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageViewAddRectangular"
         android:layout_alignParentTop="true"
-        android:layout_margin="10dp"
-        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="left|center_vertical"
         android:text="@string/compare_pizza"
-        android:textSize="20sp" >
+        android:textColor="@color/pizza_list_text_color"
+        android:textSize="@dimen/pizza_list_big_text" >
     </TextView>
 
     <ListView
@@ -22,8 +24,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageViewAddRound"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp" >
+        android:layout_alignParentTop="true" >
     </ListView>
 
     <ImageView
@@ -33,30 +34,26 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+android:id/list"
-        android:layout_margin="@dimen/pizza_item_standard_margin"
         android:clickable="true"
         android:contentDescription="@string/description_add_rectangular_pizza"
+        android:padding="@dimen/pizza_list_standard_margin"
         android:src="@drawable/pizza_eckig_add" >
-
     </ImageView>
 
-    <RelativeLayout
-        android:id="@+id/info_bottom"
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/info_text_bottom"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+android:id/list"
-        android:layout_margin="@dimen/pizza_item_standard_margin" >
-
-        <TextView
-            android:id="@+id/info_text_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_centerInParent="true"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/add_pizza"
-            android:textSize="20sp" >
-        </TextView>
-    </RelativeLayout>
+        android:layout_alignBottom="@+id/imageViewAddRound"
+        android:layout_alignTop="@id/imageViewAddRound"
+        android:layout_toLeftOf="@id/imageViewAddRectangular"
+        android:layout_toRightOf="@id/imageViewAddRound"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/add_pizza"
+        android:textColor="@color/pizza_list_text_color"
+        android:textSize="@dimen/pizza_list_big_text"
+        android:visibility="visible" >
+    </TextView>
 
     <ImageView
         android:id="@+id/imageViewAddRound"
@@ -64,11 +61,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_margin="@dimen/pizza_item_standard_margin"
         android:clickable="true"
         android:contentDescription="@string/description_add_round_pizza"
+        android:padding="@dimen/pizza_list_standard_margin"
         android:src="@drawable/pizza_rund_add" >
-
     </ImageView>
 
 </RelativeLayout>

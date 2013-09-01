@@ -3,4 +3,11 @@
     <dimen name="pizza_item_big_text">25sp</dimen>
     <dimen name="pizza_item_small_text">15sp</dimen>
     <dimen name="pizza_item_standard_margin">5dp</dimen>
+
+    <dimen name="pizza_list_big_text">20sp</dimen>
+    <!-- <dimen name="pizza_list_small_text">10sp</dimen> -->
+    <dimen name="pizza_list_standard_margin">10dp</dimen>
+    
+
 </resources>
+
