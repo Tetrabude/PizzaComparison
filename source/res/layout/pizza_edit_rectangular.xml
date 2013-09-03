@@ -140,7 +140,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/separator"
         android:textColor="@color/pizza_edit_text_color"
-        android:textSize="30dp" >
+        android:textSize="30sp" >
 
     </TextView>
 
@@ -165,7 +165,7 @@
         android:layout_toRightOf="@+id/txtSellingPriceCent"
         android:text="@string/currency"
         android:textColor="@color/pizza_edit_text_color"
-        android:textSize="30dp" >
+        android:textSize="30sp" >
 
     </TextView>
 
