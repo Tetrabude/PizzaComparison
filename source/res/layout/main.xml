@@ -69,4 +69,13 @@
         android:src="@drawable/pizza_rund_add" >
     </ImageButton>
 
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageViewAddRound"
+        android:background="#FFFFFF" />
+
 </RelativeLayout>
