@@ -24,10 +24,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageViewAddRound"
-        android:layout_alignParentTop="true" >
+        android:layout_alignParentTop="true"
+        android:drawSelectorOnTop="true" >
+
     </ListView>
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageViewAddRectangular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +40,7 @@
         android:contentDescription="@string/description_add_rectangular_pizza"
         android:padding="@dimen/pizza_list_standard_margin"
         android:src="@drawable/pizza_eckig_add" >
-    </ImageView>
+    </ImageButton>
 
     <TextView
         android:id="@+id/info_text_bottom"
@@ -55,7 +57,7 @@
         android:visibility="visible" >
     </TextView>
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageViewAddRound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,6 +67,6 @@
         android:contentDescription="@string/description_add_round_pizza"
         android:padding="@dimen/pizza_list_standard_margin"
         android:src="@drawable/pizza_rund_add" >
-    </ImageView>
+    </ImageButton>
 
 </RelativeLayout>
