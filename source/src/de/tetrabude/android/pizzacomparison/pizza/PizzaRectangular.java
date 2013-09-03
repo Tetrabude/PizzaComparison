@@ -14,8 +14,8 @@ public class PizzaRectangular extends Pizza {
 
 	public PizzaRectangular(){
 		
-		length = 23;
-		width = 42;
+		length = 0;
+		width = 0;
 		
 	}
 	
