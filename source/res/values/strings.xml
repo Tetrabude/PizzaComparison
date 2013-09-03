@@ -53,5 +53,6 @@
     <color name="redbackground">#e55d6e</color>
     <color name="pizza_item_text_color">#FFFFFF</color>
     <color name="pizza_list_text_color">#FFFFFF</color>
+    <color name="pizza_edit_text_color">#FFFFFF</color>
 
 </resources>

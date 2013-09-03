@@ -13,11 +13,14 @@
     android:background="@color/redbackground" 
     
     >
+
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/name" >
+        android:text="@string/name"
+        android:textColor="@color/pizza_edit_text_color" >
+
     </TextView>
 
     <EditText
@@ -35,7 +38,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtName"
-        android:text="@string/width" >
+        android:text="@string/width"
+        android:textColor="@color/pizza_edit_text_color" >
+
     </TextView>
 
     <EditText
@@ -45,7 +50,9 @@
         android:layout_below="@+id/textViewWidth"
         android:inputType="number"
         android:maxLength="@integer/max_text_length_for_pizza_size"
-        android:selectAllOnFocus="true" >
+        android:selectAllOnFocus="true"
+        android:textColor="@color/pizza_edit_text_color" >
+
     </EditText>
 
     <SeekBar
@@ -69,7 +76,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtWidth"
-        android:text="@string/length" >
+        android:text="@string/length"
+        android:textColor="@color/pizza_edit_text_color" >
+
     </TextView>
 
     <EditText
@@ -79,7 +88,8 @@
         android:layout_below="@+id/textViewLength"
         android:inputType="number"
         android:maxLength="@integer/max_text_length_for_pizza_size"
-        android:selectAllOnFocus="true" >
+        android:selectAllOnFocus="true"
+        android:textColor="@color/pizza_edit_text_color" >
 
     </EditText>
 
@@ -103,7 +113,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtLength"
-        android:text="@string/price" >
+        android:text="@string/price"
+        android:textColor="@color/pizza_edit_text_color" >
+
     </TextView>
 
     <EditText
@@ -115,7 +127,8 @@
         android:gravity="right|center"
         android:inputType="number"
         android:maxLength="@integer/max_text_length_for_pizza_size"
-        android:selectAllOnFocus="true" >
+        android:selectAllOnFocus="true"
+        android:textColor="@color/pizza_edit_text_color" >
 
     </EditText>
 
@@ -126,7 +139,9 @@
         android:layout_alignBottom="@+id/txtSellingPriceCent"
         android:layout_centerHorizontal="true"
         android:text="@string/separator"
+        android:textColor="@color/pizza_edit_text_color"
         android:textSize="30dp" >
+
     </TextView>
 
     <EditText
@@ -137,7 +152,8 @@
         android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
         android:inputType="number"
         android:maxLength="@integer/max_text_length_cent"
-        android:selectAllOnFocus="true" >
+        android:selectAllOnFocus="true"
+        android:textColor="@color/pizza_edit_text_color" >
 
     </EditText>
 
@@ -148,7 +164,9 @@
         android:layout_alignBottom="@+id/txtSellingPriceCent"
         android:layout_toRightOf="@+id/txtSellingPriceCent"
         android:text="@string/currency"
+        android:textColor="@color/pizza_edit_text_color"
         android:textSize="30dp" >
+
     </TextView>
 
     <SeekBar

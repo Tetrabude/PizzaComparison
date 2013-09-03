@@ -17,28 +17,31 @@
         android:id="@+id/txtLabelName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/name" >
+        android:text="@string/name"
+        android:textColor="@color/pizza_edit_text_color" >
+
     </TextView>
 
     <EditText
         android:id="@+id/txtName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:text="@string/name" 
-        android:selectAllOnFocus="true"
         android:layout_below="@+id/txtLabelName"
-        >
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text="@string/name"
+        android:textColor="@color/pizza_edit_text_color" >
+
     </EditText>
     
-
-    
    <TextView
-        android:id="@+id/txtLabelDiameter"
-         android:layout_below="@+id/txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/diameter" >
+       android:id="@+id/txtLabelDiameter"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/txtName"
+       android:text="@string/diameter"
+       android:textColor="@color/pizza_edit_text_color" >
+
     </TextView>
 
     <EditText
@@ -48,7 +51,8 @@
         android:layout_below="@+id/txtLabelDiameter"
         android:inputType="number"
         android:maxLength="@integer/max_text_length_for_pizza_size"
-        android:selectAllOnFocus="true" >
+        android:selectAllOnFocus="true"
+        android:textColor="@color/pizza_edit_text_color" >
 
     </EditText>
     
@@ -72,7 +76,9 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_below="@+id/txtDiameter"
-	    android:text="@string/price" >
+	    android:text="@string/price"
+	    android:textColor="@color/pizza_edit_text_color" >
+
     </TextView>
 
     <EditText
@@ -84,19 +90,22 @@
         android:gravity="right|center"
         android:inputType="number"
         android:maxLength="@integer/max_text_length_for_pizza_size"
-        android:selectAllOnFocus="true" >
+        android:selectAllOnFocus="true"
+        android:textColor="@color/pizza_edit_text_color" >
 
     </EditText>
     
           <TextView
-        android:id="@+id/txtLabelSellingPriceDot"
-		android:layout_alignBottom="@+id/txtSellingPriceCent"
-          android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:selectAllOnFocus="true"
-        android:text="@string/separator" 
-        android:textSize="30dp">
+              android:id="@+id/txtLabelSellingPriceDot"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/txtSellingPriceCent"
+              android:layout_centerHorizontal="true"
+              android:selectAllOnFocus="true"
+              android:text="@string/separator"
+              android:textColor="@color/pizza_edit_text_color"
+              android:textSize="30dp" >
+
     </TextView>
     
         <EditText
@@ -107,18 +116,21 @@
             android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
             android:inputType="number"
             android:maxLength="@integer/max_text_length_cent"
-            android:selectAllOnFocus="true" >
+            android:selectAllOnFocus="true"
+            android:textColor="@color/pizza_edit_text_color" >
 
     </EditText>
     
      <TextView
-        android:id="@+id/txtLabelSellingPriceCurrency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtSellingPriceCent"
-        android:layout_toRightOf="@+id/txtSellingPriceCent"
-        android:text="@string/currency"
-        android:textSize="30dp" >
+         android:id="@+id/txtLabelSellingPriceCurrency"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/txtSellingPriceCent"
+         android:layout_toRightOf="@+id/txtSellingPriceCent"
+         android:text="@string/currency"
+         android:textColor="@color/pizza_edit_text_color"
+         android:textSize="30dp" >
+
            </TextView>
         
 
