@@ -96,6 +96,7 @@ public class PizzaListAdapter extends BaseAdapter {
 					parent.getResources().getString(
 							R.string.pizza_description_round,
 							tmpRoundPizza.getPrize(),
+							tmpRoundPizza.getSquareSize(),
 							tmpRoundPizza.getDiameter()
 					)
 			);
@@ -108,6 +109,7 @@ public class PizzaListAdapter extends BaseAdapter {
 					parent.getResources().getString(
 							R.string.pizza_description_rectangular,
 							tmpRectangularPizza.getPrize(),
+							tmpRectangularPizza.getSquareSize(),
 							tmpRectangularPizza.getWidth(),
 							tmpRectangularPizza.getLength()
 					)

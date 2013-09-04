@@ -9,8 +9,8 @@
    	<string name="square_unit"> sq. inch</string>
    	<string name="currency_per_square_unit"> cents/sq inch</string>
    	
-   	    <string name="pizza_description_round">&#216; %2$.0f / %1$.2f $</string>
-    <string name="pizza_description_rectangular">%2$.0f x %3$.0f  / %1$.2f $</string>
+   	<string name="pizza_description_round">&#216; %3$.0f = %2$.0f in² / %1$.2f $</string>
+    <string name="pizza_description_rectangular">%3$.0f x %4$.0f = %2$.0f in² / %1$.2f $</string>
    	
    	
    	<!-- Pizza factor for square unit -->
