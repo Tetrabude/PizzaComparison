@@ -37,11 +37,11 @@
         android:id="@+id/textViewSquarePriceUnit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewSquarePrice"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/textViewSquarePrice"
         android:layout_margin="@dimen/pizza_item_standard_margin"
         android:gravity="right"
+        android:maxLines="1"
         android:text="@string/currency_per_square_unit"
         android:textColor="@color/pizza_item_text_color"
         android:textSize="@dimen/pizza_item_small_text" />

@@ -50,7 +50,7 @@
     <string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
     <string name="crash_dialog_ok_toast">Thank you !</string>
 
-    <color name="redbackground">#e55d6e</color>
+    <color name="redbackground">#993232</color>
     <color name="pizza_item_text_color">#FFFFFF</color>
     <color name="pizza_list_text_color">#FFFFFF</color>
     <color name="pizza_edit_text_color">#FFFFFF</color>
