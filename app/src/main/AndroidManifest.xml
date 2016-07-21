@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.tetrabude.android.pizzacomparison"
-    android:versionCode="5"
-    android:versionName="1.0.2" android:installLocation="auto">
-
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="18">
-    </uses-sdk>
+android:installLocation="auto">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -26,11 +22,6 @@
         </activity>
         <activity android:name="de.tetrabude.android.pizzacomparison.edit.PizzaEditRound" >
         </activity>
-        <activity  android:name="org.acra.CrashReportDialog"
-            android:excludeFromRecents="true"
-            android:finishOnTaskLaunch="true"
-            android:launchMode="singleInstance"
-            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>
