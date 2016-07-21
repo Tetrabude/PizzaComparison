@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.tetrabude.android.pizzacomparison"
+android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="de.tetrabude.android.pizzacomparison.PizzaComparison"
+        android:icon="@drawable/pizza_waage"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="de.tetrabude.android.pizzacomparison.edit.PizzaEditRectangular" >
+        </activity>
+        <activity android:name="de.tetrabude.android.pizzacomparison.edit.PizzaEditRound" >
+        </activity>
+        <activity  android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+    </application>
+
+</manifest>

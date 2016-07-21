@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/redbackground">
+    
+<RelativeLayout 
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#800000" 
+    
+    >
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewName"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text="@string/name" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtName"
+        android:text="@string/width" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtWidth"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWidth"
+        android:inputType="number"
+        android:maxLength="@integer/max_text_length_for_pizza_size"
+        android:selectAllOnFocus="true" >
+    </EditText>
+
+    <SeekBar
+        android:id="@+id/seekBarWidth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWidth"
+        android:layout_toRightOf="@+id/txtWidth"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:max="60"
+        android:progress="0"
+        android:scrollbarStyle="insideOverlay"
+        android:secondaryProgress="0"
+        android:thumb="@drawable/pizza_eckig" 
+        >
+    </SeekBar>
+
+    <TextView
+        android:id="@+id/textViewLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWidth"
+        android:text="@string/length" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtLength"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLength"
+        android:inputType="number"
+        android:maxLength="@integer/max_text_length_for_pizza_size"
+        android:selectAllOnFocus="true" >
+
+    </EditText>
+
+    <SeekBar
+        android:id="@+id/seekBarLength"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLength"
+        android:layout_toRightOf="@+id/txtLength"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:max="60"
+        android:progress="0"
+        android:scrollbarStyle="insideOverlay"
+        android:secondaryProgress="0"
+        android:thumb="@drawable/pizza_eckig" >
+    </SeekBar>
+
+    <TextView
+        android:id="@+id/textViewSellingPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLength"
+        android:text="@string/price" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtSellingPriceEuro"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSellingPrice"
+        android:layout_toLeftOf="@+id/txtLabelSellingPriceDot"
+        android:gravity="right|center"
+        android:inputType="number"
+        android:maxLength="@integer/max_text_length_for_pizza_size"
+        android:selectAllOnFocus="true" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtLabelSellingPriceDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtSellingPriceCent"
+        android:layout_centerHorizontal="true"
+        android:text="@string/separator"
+        android:textSize="30dp" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtSellingPriceCent"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSellingPrice"
+        android:layout_toRightOf="@+id/txtLabelSellingPriceDot"
+        android:inputType="number"
+        android:maxLength="@integer/max_text_length_cent"
+        android:selectAllOnFocus="true" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtLabelSellingPriceCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtSellingPriceCent"
+        android:layout_toRightOf="@+id/txtSellingPriceCent"
+        android:text="@string/currency"
+        android:textSize="30dp" >
+    </TextView>
+
+    <SeekBar
+        android:id="@+id/seekBarEuro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSellingPriceCent"
+        android:max="30"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:progress="0"
+        android:scrollbarStyle="insideOverlay"
+        android:secondaryProgress="0"
+        android:thumb="@drawable/euro" >
+    </SeekBar>
+
+    <SeekBar
+        android:id="@+id/seekBarCent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarEuro"
+        android:max="99"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:progress="0"
+        android:scrollbarStyle="insideOverlay"
+        android:secondaryProgress="0"
+        android:thumb="@drawable/cent" >
+   </SeekBar>
+
+    
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarCent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/save">
+    </Button>
+    
+    
+</RelativeLayout>
+</ScrollView>
