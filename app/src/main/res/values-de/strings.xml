@@ -37,13 +37,4 @@
     <string name="error_price">Fehlerhafter Preis</string>
     <!-- <string name="rot">#800000</string> -->
 
-    <string name="crash_toast_text">Uuuuups! Ich bin abgestürzt, hilf mir durch das Absenden des Fehlerberichts!</string>
-    <string name="crash_notif_ticker_text">Fehler, bitte sende den Fehlerbericht!</string>
-    <string name="crash_notif_title">Pizza Preisvergleich ist abgestürzt :-(</string>
-    <string name="crash_notif_text">Klicke hier um uns zu helfen!</string>
-    <string name="crash_dialog_title">Pizza Preisvergleich ist abgestürzt :-(</string>
-    <string name="crash_dialog_text">Ein Fehler hat die Anwendung abstürzen lassen. Bitte hilf uns mit dem Versenden dieses Fehlerberichts! Dazu musst du nur auf \'OK\' klicken!</string>
-    <string name="crash_dialog_comment_prompt">Wenn du möchtest kannst du hier noch einen Kommentar hinterlassen:</string>
-    <string name="crash_dialog_ok_toast">Vielen Dank für deine Unterstützung! :-)</string>
-
 </resources>
