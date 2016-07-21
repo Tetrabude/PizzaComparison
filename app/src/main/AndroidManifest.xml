@@ -22,11 +22,6 @@ android:installLocation="auto">
         </activity>
         <activity android:name="de.tetrabude.android.pizzacomparison.edit.PizzaEditRound" >
         </activity>
-        <activity  android:name="org.acra.CrashReportDialog"
-            android:excludeFromRecents="true"
-            android:finishOnTaskLaunch="true"
-            android:launchMode="singleInstance"
-            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>
