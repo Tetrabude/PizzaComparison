@@ -35,12 +35,12 @@
     <string name="error_price">Prezzo sbagliato</string>
     <!-- <string name="rot">#800000</string> -->
 
-    <string name="crash_toast_text">Oooops! C'è stato un crash! Manda una segnalazione di errore per aiutarmi!</string>
+    <string name="crash_toast_text">Oooops! C\'è stato un crash! Manda una segnalazione di errore per aiutarmi!</string>
     <string name="crash_notif_ticker_text">Errore, per favore manda la segnalazione di errore!</string>
     <string name="crash_notif_title">ConfrontaPizza si è bloccato :-(</string>
     <string name="crash_notif_text">Clicca qui per aiutarci!</string>
     <string name="crash_dialog_title">ConfrontaPizza si è bloccato :-(</string>
-    <string name="crash_dialog_text">Un errore ha causato un crash dell' applicazione. Aiutaci mandandoci una segnalazione di errore. Devi solo cliccare su \'OK\'!</string>
+    <string name="crash_dialog_text">Un errore ha causato un crash dell\' applicazione. Aiutaci mandandoci una segnalazione di errore. Devi solo cliccare su \'OK\'!</string>
     <string name="crash_dialog_comment_prompt">Se vuoi, puoi lasciare un tuo commento:</string>
     <string name="crash_dialog_ok_toast">Grazie per il tuo aiuto! :-)</string>
 	
