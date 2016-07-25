@@ -18,10 +18,11 @@
     <string name="currency_per_square_unit"> €/m²</string>
     <string name="save">Salva</string>
     <string name="add_pizza">&#8592; Aggiungi pizza &#8594;</string>
-       <string name="compare_pizza">Ey, la tua lista di pizze da confrontare è ancora vuota. \n \n
+    <!-- <string name="remove_pizza">Remove</string> -->
+    <string name="compare_pizza">Ey, la tua lista di pizze da confrontare è ancora vuota. \n \n
        	   Aggiungi qualche tipo di pizza per ordinare la lista per prezzo al metro quadrato. \n
        	   La piú economica apparirá in cima alla lista.
-       </string>
+    </string>
 
     <!-- Descriptions -->
     <string name="description_add_rectangular_pizza">Aggiungi pizza rettangolare.</string>
