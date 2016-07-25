@@ -53,7 +53,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener, O
 		
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.activity_main);
 		
 		
 		

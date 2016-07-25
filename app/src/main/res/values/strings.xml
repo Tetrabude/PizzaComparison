@@ -39,6 +39,5 @@
     <string name="error_price">Wrong price</string>
     <!-- <string name="rot">#800000</string> -->
 
-    <color name="redbackground">#800000</color>
 
 </resources>
