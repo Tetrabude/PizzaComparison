@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Pizza Properties -->
+    <string name="app_name">Pizza Comparison</string>
+    <string name="currency">€</string>
+    <string name="separator">,</string>
+    <string name="selling_price">{0} {1}</string>
+    <string name="name">Name</string>
+    <string name="diameter">Diameter</string>
+    <string name="price">Price</string>
+    <string name="width">Width</string>
+    <string name="length">Length</string>
+    <string name="pizza">Pizza</string>
+    <string name="per">for</string>
+    <string name="equals">=</string>
+    <string name="square_unit"> cm²</string>
+    <string name="currency_per_square_unit"> €/m²</string>
+    <string name="save">Save</string>
+    <string name="add_pizza">&#8592; add pizza &#8594;</string>
+    <string name="remove_pizza">remove</string>
+    <string name="compare_pizza"> Hey, your list for comparing pizza is empty.\n \n
+           Add some pizza of one kind. Then they will be sorted by euros per square meter.\n
+           The cheapest is on top. </string>
+           
+    <!-- Pizza factor for square unit -->
+	<integer name="factor_to_square_currency">1</integer>
+	<integer name="factor_to_square_unit">10000</integer>
+	
+    <!-- Descriptions -->
+    <string name="description_add_rectangular_pizza">Add rectangular pizza.</string>
+    <string name="description_add_round_pizza">Add round pizza.</string>
+    <string name="description_pizza_item">Edit pizza.</string>
+
+    <!-- Error Messages -->
+    <string name="error_diameter">Wrong diameter</string>
+    <string name="error_width">Wrong width</string>
+    <string name="error_length">Wrong length</string>
+    <string name="error_name">Wrong pizza name</string>
+    <string name="error_price">Wrong price</string>
+    <!-- <string name="rot">#800000</string> -->
+
+    <string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help him fix the issue !</string>
+    <string name="crash_notif_ticker_text">Unexpected error, please send a report&#8230;</string>
+    <string name="crash_notif_title">Pizza Price Comparison has crashed&#8230;</string>
+    <string name="crash_notif_text">Please click here to help fix the issue.</string>
+    <string name="crash_dialog_title">Pizza Price Comparison has crashed</string>
+    <string name="crash_dialog_text">An unexpected error occurred forcing the
+    application to stop. Please help us fix this by sending us error data,
+    all you have to do is click \'OK\'.</string>
+    <string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
+    <string name="crash_dialog_ok_toast">Thank you !</string>
+
+    <color name="redbackground">#800000</color>
+
+</resources>
