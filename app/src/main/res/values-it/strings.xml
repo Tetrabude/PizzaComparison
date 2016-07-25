@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Pizza Properties -->
+    <string name="app_name">ConfrontaPizza</string>
+    <string name="currency">€</string>
+    <string name="separator">,</string>
+    <string name="selling_price">{0} {1}</string>
+    <string name="name">Nome</string>
+    <string name="diameter">diametro</string>
+    <string name="price">prezzo</string>
+    <string name="width">larghezza</string>
+    <string name="length">lunghezza</string>
+    <string name="pizza">pizza</string>
+    <string name="per">per</string>
+    <string name="equals">=</string>
+    <string name="square_unit"> cm²</string>
+    <string name="currency_per_square_unit"> €/m²</string>
+    <string name="save">Salva</string>
+    <string name="add_pizza">&#8592; Aggiungi pizza &#8594;</string>
+       <string name="compare_pizza">Ey, la tua lista di pizze da confrontare è ancora vuota. \n \n
+       	   Aggiungi qualche tipo di pizza per ordinare la lista per prezzo al metro quadrato. \n
+       	   La piú economica apparirá in cima alla lista.
+       </string>
+
+    <!-- Descriptions -->
+    <string name="description_add_rectangular_pizza">Aggiungi pizza rettangolare.</string>
+    <string name="description_add_round_pizza">Aggiungi pizza rotonda.</string>
+
+    <!-- Error Messages -->
+    <string name="error_diameter">Diametro sbagliato</string>
+    <string name="error_width">Larghezza sbagliata</string>
+    <string name="error_length">Lunghezza sbagliata</string>
+    <string name="error_name">Nome sbagliato</string>
+    <string name="error_price">Prezzo sbagliato</string>
+    <!-- <string name="rot">#800000</string> -->
+
+    <string name="crash_toast_text">Oooops! C'è stato un crash! Manda una segnalazione di errore per aiutarmi!</string>
+    <string name="crash_notif_ticker_text">Errore, per favore manda la segnalazione di errore!</string>
+    <string name="crash_notif_title">ConfrontaPizza si è bloccato :-(</string>
+    <string name="crash_notif_text">Clicca qui per aiutarci!</string>
+    <string name="crash_dialog_title">ConfrontaPizza si è bloccato :-(</string>
+    <string name="crash_dialog_text">Un errore ha causato un crash dell' applicazione. Aiutaci mandandoci una segnalazione di errore. Devi solo cliccare su \'OK\'!</string>
+    <string name="crash_dialog_comment_prompt">Se vuoi, puoi lasciare un tuo commento:</string>
+    <string name="crash_dialog_ok_toast">Grazie per il tuo aiuto! :-)</string>
+	
+</resources>
