@@ -51,7 +51,7 @@ public class Helper {
 	}
 	
 	static public String getCentString(double value){
-		return doubleToRealNumberString(Math.floor((value - Math.floor(value) ) * 100));
+		return doubleToRealNumberString((value * 100.0) % 100);
 	}
 
 	public static boolean checkPrice(String euro, String cent, int failureMessage, Context context) {
