@@ -8,8 +8,8 @@ android {
         applicationId "de.tetrabude.android.pizzacomparison"
         minSdkVersion 8
         targetSdkVersion 23
-        versionCode 10
-        versionName "2.0.0-Alpha-10"
+        versionCode 11
+        versionName "1.0.3-11"
     }
 
     buildTypes {
