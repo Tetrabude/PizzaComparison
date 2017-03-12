@@ -1,0 +1,27 @@
+language: android
+
+sudo: required
+
+
+android:
+  components:
+    - tools
+    - platform-tools
+    - build-tools-25.0.0
+    - android-25
+    - extra-google-m2repository
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    - extra-android-support
+  licenses:
+    - '.+'
+
+jdk:
+  - oraclejdk8
+
+before_install:
+  - echo y | sudo apt-get update
+  - echo y | sudo apt-get install openjdk-7-jre
+  - export JAVA7_HOME=/usr/lib/jvm/java-7-oracle
+  - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
+  - export JAVA_HOME=$JAVA8_HOME
