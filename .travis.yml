@@ -4,4 +4,5 @@ android:
   components:
     - build-tools-25.0.0
     - android-25
-    - extra
+    - extra-android-m2repository
+    - extra-google-m2repository
